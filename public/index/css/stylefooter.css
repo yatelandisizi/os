@@ -1,0 +1,75 @@
+
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	margin:0;
+	padding:0;
+	background:#fff;
+ }
+
+
+.keep ul{
+    margin: 20px 0 0 0;
+	padding: 0;
+	text-align:center;
+	}
+.keep ul li{
+	display:inline-block;
+	list-style-type:none;
+	margin: 0 0px;
+	}
+.keep ul li a.facebook{
+	background: url(../images/social.png) no-repeat 0px 0px;
+	display: block;
+	width: 48px;
+	height: 48px;
+	}
+.keep ul li a.facebook:hover{
+	background: url(../images/social2.png) no-repeat 0px 0px;
+	transform: rotateZ(360deg);
+	}
+.keep ul li a.twitter{
+	background: url(../images/social.png) no-repeat -57px 0px;
+	display: block;
+	width: 48px;
+	height: 48px;
+	}
+.keep ul li a.twitter:hover{
+	background: url(../images/social2.png) no-repeat -57px 0px;
+	transform: rotateZ(360deg);
+	}
+.keep ul li a.googl{
+	background: url(../images/social.png) no-repeat -116px 0px;
+	display: block;
+	width: 48px;
+	height: 48px;
+	}
+.keep ul li a.googl:hover{
+	background: url(../images/social2.png) no-repeat -116px 0px;
+	transform: rotateZ(360deg);
+	}
+.keep ul li a.message{
+	background: url(../images/social.png) no-repeat -175px 0px;
+	display: block;
+	width: 48px;
+	height: 48px;
+	}
+.keep ul li a.message:hover{
+	background: url(../images/social2.png) no-repeat -175px 0px;
+	transform: rotateZ(360deg);
+	}
+
+	.keep {
+	  padding: 64px 0 0px 0;
+	  min-height: 20px;
+	}
+.keep ul {
+	  margin: 40px 0 0 0;
+	}
+	.keep ul li {
+	  margin: 0 10px;
+	}
+	.keep {
+	  padding: 0px 0 0px 0;
+	  min-height: 0px;
+	}

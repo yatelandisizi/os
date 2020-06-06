@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+  <link rel="shortcut icon" href="/os/public/favicon.ico" >
+  <!--网站ico小图标-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>用户注册</title>
+	<!--     Fonts and icons     -->
+	<!-- CSS Files -->
+  <link href="/os/public/zhuce/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="/os/public/zhuce/css/gsdk-bootstrap-wizard.css" rel="stylesheet" />
+	<!-- CSS Just for demo purpose, don't include it in your project -->
+	<link href="/os/public/zhuce/css/demo.css" rel="stylesheet" />
+  <script type="text/javascript" src="/os/public/zhuce/js/region.js"></script>
+  <style type="text/css">
+  a:hover{color: yellow;}
+  </style>
+</head>
+<body>
+<div class="image-container set-full-height" style="background: url('/os/public/zhuce/img/wizard.jpg')">
+    <!--   Creative Tim Branding   -->
+    <a href="#">
+         <div class="logo-container">
+            <div class="logo">
+                <img src="/os/public/zhuce/img/timg.jpg">
+            </div>
+            <div class="brand" style="color: red;font-size: 30px;font-weight: 900;">
+                软件商店工作室
+            </div>
+        </div>
+    </a>
+	<!--  Made With Get Shit Done Kit  -->
+		<a href="#/get-shit-done/index.html?ref=get-shit-done-bootstrap-wizard" class="made-with-mk">
+			<div class="brand" align="center">B</div>
+			<div class="made-with">Made in <strong>BOM</strong></div>
+		</a>
+    <!--   Big container   -->
+    <div class="container">
+        <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <!--      Wizard container        -->
+            <div class="wizard-container">
+                <div class="card wizard-card" data-color="orange" id="wizardProfile">
+                  <form id="form1" name="form1" enctype="multipart/form-data" method="post" action="{:url('zhuce/upload')}">
+                <!--        You can switch ' data-color="orange" '  with one of the next bright colors: "blue", "green", "orange", "red"          -->
+                    	<div class="wizard-header">
+                        	<h3>
+                        	   <b>构建</b>您的个人信息<br>
+                        	   <small>这些信息能够帮助我们更好的服务您</small>
+                        	</h3>
+                    	</div>
+						          <div class="wizard-navigation">
+							            <ul>
+	                            <li><a href="#about" data-toggle="tab">关于个人</a></li>
+	                            <li><a href="#account" data-toggle="tab">联系方式</a></li>
+	                            <li><a href="#address" data-toggle="tab">所在地区</a></li>
+	                        </ul>
+						          </div>
+                        <div class="tab-content">
+                            <div class="tab-pane" id="about">
+                              <div class="row">
+                                  <h4 class="info-text">我们从基本信息开始(有验证)</h4>
+                                  <div class="col-sm-4 col-sm-offset-1">
+                                     <div class="picture-container">
+                                          <div class="picture">
+                                              <img src="/os/public/zhuce/img/default-avatar.png" class="picture-src" id="wizardPicturePreview" title=""/>
+                                              <input type="file" name="file1" id="wizard-picture">
+                                          </div>
+                                          <h6>选择一张照片</h6>
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <label>用户名<small>(必填)</small></label>
+                                        <input name="username" type="text" class="form-control" placeholder="用户昵称">
+                                      </div>
+                                      <div class="form-group">
+                                        <label>密码<small>(必填)</small></label>
+                                        <input name="password" type="password" class="form-control" placeholder="认证密码">
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-10 col-sm-offset-1">
+                                      <div class="form-group">
+                                          <label>电子邮件<small>(必填)</small></label>
+                                          <input name="email" type="email" class="form-control" placeholder="andrew@creative-tim.com">
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="tab-pane" id="account">
+                                <h4 class="info-text">填写您的联系方式</h4>
+                                <div class="row">
+                                  <div class="col-sm-5 col-sm-offset-1">
+                                     <div class="form-group">
+                                        <label>电话号码：</label>
+                                        <input name="phone" type="text" class="form-control" placeholder="电话">
+                                      </div>
+                                      <div class="form-group">
+                                        <label>QQ号码：</label>
+                                        <input name="QQ" type="text" class="form-control" placeholder="QQ">
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-5">
+                                      <div class="form-group">
+                                        <label>微信号码：</label>
+                                        <input name="weixin" type="text" class="form-control" placeholder="微信">
+                                      </div>
+                                      <div class="form-group">
+                                        <label>密保问题：</label>
+                                         <select name="question" class="form-control">
+                                                {volist name="list" id="vo"}
+                                                <option value="{$vo.question}">{$vo.question}</option>
+                                                {/volist}
+                                            </select>
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-10 col-sm-offset-1">
+                                      <div class="form-group">
+                                          <label>密保答案：</label>
+                                          <input name="answer" type="text" class="form-control" placeholder="回答">
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="address">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h4 class="info-text">选择您所在的地区</h4>
+                                    </div>
+                                    <div class="col-sm-5 col-sm-offset-1">
+                                         <div class="form-group">
+                                            <label>国家：</label>
+                                            <input name="guojia" type="text" class="form-control" value="中国" readonly="readonly">
+                                          </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                         <div class="form-group">
+                                            <label>省：</label>
+                                            <select id="cmbProvince" name="pro" class="form-control"></select>
+                                          </div>
+                                    </div>
+                                    <div class="col-sm-5 col-sm-offset-1">
+                                         <div class="form-group">
+                                            <label>市：</label>
+                                            <select id="cmbCity" name="city" class="form-control"></select>
+                                          </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                         <div class="form-group">
+                                            <label>区：</label><br>
+                                            <select id="cmbArea" name="county" class="form-control"></select>
+                                          </div>
+                                    </div>
+                                    <input type="hidden" name="jifen" value="350">
+                                </div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">  addressInit('cmbProvince', 'cmbCity', 'cmbArea');</script>
+                        <div class="wizard-footer height-wizard">
+                            <div class="pull-right">
+                                <input type='button' class='btn btn-next btn-fill btn-warning btn-wd btn-sm' name='next' value='下一步' />
+                                <input type='submit' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='zhuce' value='完成' />
+
+                            </div>
+
+                            <div class="pull-left">
+                                <input type='button' class='btn btn-previous btn-fill btn-default btn-wd btn-sm' name='previous' value='返回' />
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div>
+            </div> <!-- wizard container -->
+        </div>
+        </div><!-- end row -->
+    </div> <!--  big container -->
+    <div style="margin-top: 120px;" align="center">
+      <tr align="center" bgcolor="#d644e9" width="100%">
+                <td>
+                    <div align="center" style="border-radius:15px;opacity:.8;background-color: #b641b6;">
+                        <div>
+                            <a class="bianhua" href="#">关于我们</a>&nbsp;｜&nbsp;
+                            <a class="bianhua" href="#">媒体报道</a>&nbsp;｜&nbsp;
+                            <a class="bianhua" href="#">品牌招商</a>&nbsp;｜&nbsp;
+                            <a class="bianhua" href="#">隐私条款</a>&nbsp;｜&nbsp;
+                            <a href="#" class="bianhua">友情链接</a>&nbsp;｜&nbsp;
+                            <a class="bianhua" href="#">系统地图</a>
+                        </div>
+                        <div style="color: #FFF">
+                        Copyright ? www.BOM.com，All Rights Reserved 冀ICP备08114786号-1 许可证：冀B2-20080329<br/>
+                        本站基于{$list3.internet}+{$list3.computer}+{$list3.os}+{$list3.server}+{$list3.sqlku}+{$list3.phpmyadmin}+{$list3.environment} 构建 版权所有 {$list3.webname}
+                        </div>
+                    </div>
+                </td>
+            </tr>
+    </div>
+</div>
+
+
+</body>
+	<!--   Core JS Files   -->
+	<script src="/os/public/zhuce/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+	<script src="/os/public/zhuce/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/os/public/zhuce/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+	<!--  Plugin for the Wizard -->
+	<script src="/os/public/zhuce/js/gsdk-bootstrap-wizard.js"></script>
+	<!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
+	<script src="/os/public/zhuce/js/jquery.validate.min.js"></script>
+</html>

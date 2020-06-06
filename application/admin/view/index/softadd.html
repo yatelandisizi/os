@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>添加软件</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/os/public/favicon.ico" >
+    <!--网站ico小图标-->
+    <link href="/os/public/admin/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- bootstrap css样式  -->
+    <link href="/os/public/admin/css/animate.min.css" rel="stylesheet"/>
+    <!--  Light Bootstrap Table core CSS  -->
+    <link href="/os/public/admin/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+    <!--  CSS for Demo Purpose, don't include it in your project -->
+    <link href="/os/public/admin/css/demo.css" rel="stylesheet" />
+    <!--     Fonts and icons     -->
+    <link href="/os/public/admin/css/pe-icon-7-stroke.css" rel="stylesheet" />
+</head>
+<body class="beijing">
+<form id="form1" name="form1" enctype="multipart/form-data" method="post" action="{:url('index/softaddinfo')}">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">添加新的软件</h4>
+                                <input type="hidden" name="frequency" value="0">
+                            </div>
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>软件名称：(例：Dreamweaver CS6)</label>
+                                            <input type="text" name="name" class="form-control" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>软件类型：(例：网站设计软件)</label>
+                                            <input type="text" name="type" class="form-control" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>运行设备：(例：电脑)</label>
+                                            <select name="device" class="form-control">
+                                                <option value="windows">windows设备</option>
+                                                <option value="android">android设备</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>运行环境：(例：Win7/Win8/Win10)</label>
+                                            <select name="environment" class="form-control">
+                                                <option value="Win7/win8/win10">Win7/win8/win10</option>
+                                                <option value="Win7">Win7</option>
+                                                <option value="Win8">Win8</option>
+                                                <option value="Win10">Win10</option>
+                                                <option value="XP">XP</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                               
+                                   
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>支持语言：</label>
+                                            <select name="language" class="form-control">
+                                                <option value="简体中文">简体中文</option>
+                                                <option value="英文">英文</option>
+                                                <option value="简体中文/英文">简体中文/英文</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                               
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>支持系统位数：</label>
+                                            <select name="support" class="form-control">
+                                                <option value="32">32</option>
+                                                <option value="64">64</option>
+                                                <option value="32/64">32/64</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                                    <div class="row"  align="center">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>软件封面：</label><br>
+                                                <div class="alert alert-info">
+                                                    <input type="file" name="file1" value="">
+                                                </div><!--图片隐藏域-->
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>软件图片1：</label><br>
+                                                <div class="alert alert-success">
+                                                    <input type="file" name="file2" value="">
+                                                </div><!--图片隐藏域-->
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>软件图片2：</label><br>
+                                                <div class="alert alert-warning">
+                                                    <input type="file" name="file3" value="">
+                                                </div><!--图片隐藏域-->
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>软件图片3：</label><br>
+                                                <div class="alert alert-danger">
+                                                    <input type="file" name="file4" value="">
+                                                </div><!--图片隐藏域-->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>软件功能标题：</label>
+                                                <input type="text" name="title1" class="form-control" value="">
+                                            </div>
+                                        </div>
+                                   
+                                        <div class="col-md-9">
+                                            <div class="form-group">
+                                                <label>软件功能介绍：</label>
+                                                <input type="text" name="introduce1" class="form-control" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>软件用法标题：</label>
+                                                <input type="text" name="title2" class="form-control" value="">
+                                            </div>
+                                        </div>
+                                 
+                                        <div class="col-md-9">
+                                            <div class="form-group">
+                                                <label>软件用法介绍：</label>
+                                                <input type="text" name="introduce2" class="form-control" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>软件特点标题：</label>
+                                                <input type="text" name="title3" class="form-control" value="">
+                                            </div>
+                                        </div>
+                                 
+                                        <div class="col-md-9">
+                                            <div class="form-group">
+                                                <label>软件特点介绍：</label>
+                                                <input type="text" name="introduce3" class="form-control" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>上传本地下载文件：</label>
+                                                <div class="alert alert-success">
+                                                    <input type="file" name="file5" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>迅雷下载地址：</label>
+                                                <input type="text" name="xunlei" class="form-control" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>百度网盘下载地址：</label>
+                                                <input type="text" name="yunpan" class="form-control" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">提交</button>
+                                    <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</form>
+</body>
+</html>

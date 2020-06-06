@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>文件上传实验接受部分</title>
+</head>
+<body>
+	<div align="center">
+<form id="form1" name="form1" enctype="multipart/form-data" method="post" action="{:url('index/shiyanupdata')}">
+	<input type="text" name="file1" value="{$a}"></br>
+	<input type="text" name="file2" value="{$b}"></br>
+	<input type="text" name="file3" value="{$c}"></br>
+	<input type="text" name="file4" value="{$d}"></br>
+	<input type="text" name="name" value="{$name}"></br>
+	<input type="text" name="pass" value="{$pass}"></br>
+	<button type="submit">提交</button>
+</form>
+</div>
+</body>
+</html>

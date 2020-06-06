@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="/os/public/admin/img/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>网站基本信息</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Bootstrap core CSS     -->
+    <link href="/os/public/admin/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Animation library for notifications   -->
+    <link href="/os/public/admin/css/animate.min.css" rel="stylesheet"/>
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="/os/public/admin/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="/os/public/admin/css/demo.css" rel="stylesheet" />
+    <!--     Fonts and icons     -->
+    <link href="/os/public/admin/css/pe-icon-7-stroke.css" rel="stylesheet" />
+</head>
+<body class="beijing">
+<form id="form1" name="form1" method="post">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">网站新闻管理：</h4>
+                        <p class="category">在此修改网站新闻信息</p>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>windows网站新闻：</h5>
+                                <p class="category">windows系统：</p>
+                                <div class="alert alert-info">
+                                    <a href="{:url('index/newswinupdata')}" class="btn btn-info btn-fill">windows新闻</a>
+                                    <a href="{:url('index/newswinupdata')}" class="close" style="margin-top: 7px;">修改</a>
+                                </div>
+                                <p class="category">windows10新闻</p>
+                                <div class="alert alert-success">
+                                    <a href="{:url('index/newswin10updata')}" class="btn btn-success btn-fill" value="">windows10新闻</a>
+                                    <a href="{:url('index/newswin10updata')}" class="close" style="margin-top: 7px;">修改</a>
+                                </div>
+                                <p class="category">windows8新闻</p>
+                                <div class="alert alert-warning">
+                                    <a href="{:url('index/newswin8updata')}" class="btn btn-warning btn-fill" value="">windows8新闻</a>
+                                    <a href="{:url('index/newswin8updata')}" class="close" style="margin-top: 7px;">修改</a>
+                                </div>
+                                <p class="category">windows7新闻</p>
+                                <div class="alert alert-danger">
+                                    <a href="{:url('index/newswin7updata')}" class="btn btn-danger btn-fill" value="">windows7新闻</a>
+                                    <a href="{:url('index/newswin7updata')}" class="close" style="margin-top: 7px;">修改</a>
+                                </div>
+                                <p class="category">windows首页新版系统</p>
+                                <form id="form1" name="form1" method="post" action="{:url('index/indexupdata')}">
+                                <input type="hidden" name="id" value="{$list.id}">
+                                <div class="alert alert-danger btn-danger btn-fill">
+                                    <select name="winbanben" class="form-control" style="width: 80%;">
+                                        <option value="{$list.name}">{$list.upbanben}{$list.name}(当前)</option>
+                                        {volist name="list1" id="vo"}
+                                            <option value="{$vo.winbanben}">{$vo.upbanben}{$vo.name}</option>
+                                        {/volist}
+                                    </select>
+                                    <input type="submit" class="close" style="margin-top: -34px;margin-left: 100%;" value="修改">
+                                </div>
+                                </form>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>Linux系统：</h5>
+                                <p class="category">ubuntu系统：</p>
+                                <div class="alert alert-info">
+                                    <a href="{:url('index/newsubuntuupdata')}" class="btn btn-info btn-fill">Ubuntu系统</a>
+                                    <a href="{:url('index/newsubuntuupdata')}" class="close" style="margin-top: 7px;">修改</a>
+                                </div>
+                                <p class="category">Redhat系统：</p>
+                                <div class="alert alert-success">
+                                    <a href="{:url('index/newsredhatupdata')}" class="btn btn-success btn-fill">Redhat系统</a>
+                                    <a href="{:url('index/newsredhatupdata')}" class="close" style="margin-top: 7px;">修改</a>
+                                </div>
+                                <p class="category">Fedora系统：</p>
+                                <div class="alert alert-warning">
+                                    <a href="{:url('index/newsfedoraupdata')}" class="btn btn-warning btn-fill">Fedora系统</a>
+                                    <a href="{:url('index/newsfedoraupdata')}" class="close" style="margin-top: 7px;">修改</a>
+                                </div>
+                                <p class="category">Respberry pi系统：</p>
+                                <div class="alert alert-danger">
+                                    <a href="{:url('index/newsraspberryupdata')}" class="btn btn-danger btn-fill">Respberry pi系统</a>
+                                    <a href="{:url('index/newsraspberryupdata')}" class="close" style="margin-top: 7px;">修改</a>
+                                </div>
+                                <p class="category">Mac OS系统：</p>
+                                <div class="alert alert-danger">
+                                    <a href="{:url('index/newsmacupdata')}" class="btn btn-danger btn-fill">Mac OS系统</a>
+                                    <a href="{:url('index/newsmacupdata')}" class="close" style="margin-top: 7px;">修改</a>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="places-buttons">
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3 text-center">
+                                    <h5>网站技术支持
+                                        <p class="category">本网站基于ThinkPHP5.0版本</p>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-md-offset-3">
+                                    <a href="{:url('index/index/index')}" class="btn btn-default btn-block">网站首页</a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="{:url('index/index/windows10')}" class="btn btn-default btn-block">Win10系统</a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="{:url('index/index/windows8')}" class="btn btn-default btn-block">Win8系统</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-md-offset-3">
+                                    <a href="{:url('index/index/windows7')}" class="btn btn-default btn-block">Win7系统</a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="{:url('index/index/raspberryshow')}" class="btn btn-default btn-block">树莓派系统</a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="{:url('index/index/index')}" class="btn btn-default btn-block">软件页</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</form>
+</body>
+</html>

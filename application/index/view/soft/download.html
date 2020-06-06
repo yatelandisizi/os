@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>{$list.name}软件下载</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="树莓派, windows系统, 系统, Andriod, windows,ios" />
+	<meta name="keywords" content="树莓派, windows系统, 系统, Andriod, windows,ios" />
+    <!--网站搜索关键字-->
+	<link rel="shortcut icon" href="/os/public/favicon.ico" >  
+	<!--网站ico小图标-->
+	<link rel="stylesheet" href="/os/public/index/css/icomoon.css">
+	<!--图标样式-->
+	<link rel="stylesheet" href="/os/public/download/css/style.css">
+	<!--重要样式-->
+<link href="/os/public/index/css/bootstrapheader.css" rel="stylesheet" type="text/css" media="all">
+<!--快捷访问样式-->
+	<link href="/os/public/download/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="/os/public/download/css/style.css" rel='stylesheet' type='text/css' />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script type="text/javascript" src="/os/public/download/js/move-top.js"></script>
+<script type="text/javascript" src="/os/public/download/js/easing.js"></script>
+<!--/script-->
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			});
+</script>
+<!---->
+</head>
+<body>
+<!---strat-banner---->
+<div class="banner" id="to-top">				
+	 <div class="header">  
+		  <div class="container">
+			  <div class="logo">
+					<h1 style="font-size: 50px;color: #FFF;">BOM</h1>
+			 </div>
+			 <!---start-top-nav---->
+			 <div class="top-menu">
+				  <span class="menu"> </span> 
+				   <ul>
+						<li class="active"><a href="index.html">首页</a></li>						
+						<li><a href="contact.html">账号管理</a></li>	
+						<li><a href="terms.html">TERMS</a></li>						
+						<div class="clearfix"> </div>
+				 </ul>
+			 </div>
+			 <div class="clearfix"></div>
+					<script>
+					$("span.menu").click(function(){
+					$(".top-menu ul").slideToggle("slow" , function(){
+					});
+					});
+					</script>
+				<!---//End-top-nav---->
+		 </div>
+	 </div>
+	 <div class="container">
+		 <div class="banner-head">
+			 <h1>{$list.name}软件下载地址</h1>
+			 <h2>访问次数：{$list.frequency}</h2>
+		 </div>
+		 <div class="banner-links">
+			 <ul>
+				 <li><a href="#">详细信息</a></li>
+				 <li class="active"><a href="#">下载地址</a></li>
+				 <div class="clearfix"></div>
+			 </ul>
+		 </div>
+	 </div>
+</div>
+<!---//End-banner---->
+
+<div class="terms">
+	
+	 <div class="container">
+	 	<div align="content">
+<form id="form1" name="form1" method="post" enctype="multipart/form-data" action="{:url('soft/softshoucang')}?userid={$user}">
+<input type="hidden" name="photo" value="{$list.photo}">
+<input type="hidden" name="name" value="{$list.name}">
+<input type="hidden" name="type" value="{$list.type}">
+<input type="hidden" name="softid" value="{$list.id}">
+<button href="#" style="color: red;">收藏</button>
+</form>
+</div>
+		  <div class="terms-sec-head">
+				<h3>{$list.filename}</h3>
+				<p>哈希值：{$list.sha}</p>
+		  </div> 
+		 <div class="term">
+				<h4>&nbsp; 百度云下载：</h4>
+				<p>{$list.yunpan}</p>
+		 </div>	
+		 <div class="term">
+				<h4>&nbsp; 迅雷下载：</h4>
+				<a href="{$list.xunlei}" style="word-wrap: break-word;">{$list.xunlei}</a>
+		 </div>	
+		 <div class="term">
+				<h4>&nbsp; 本地下载：</h4>
+				<p align="center"><a href="{$list.bendi}">本地下载地址</a></p>
+		 </div>
+		
+		
+		 <div class="clearfix"></div>
+				 <div class="content-grid">
+					 <div class="content-grid-head">
+						 <h3 style="color: red;">北京时间(东八区)：</h3>
+						 <h4><script>  
+						 var date = new Date();  //创建对象  
+						 var y = date.getFullYear();     //获取年份 
+						 var m =date.getMonth()+1;   //获取月份  返回0-11  
+						 var d = date.getDate(); // 获取日  
+						 var w = date.getDay();   //获取星期几  返回0-6   (0=星期天)  
+						 var h = date.getHours();  
+						 var minute = date.getMinutes()  
+						 var s = date.getSeconds();  
+						 document.write(y+"-"+m+"-"+d+"   "+h+":"+minute+":"+s);  
+						 /*  
+						 charAt(int ch)用法  
+						 var str="Hello world!"  
+						 document.write(str.charAt(1))
+						 输出：e  
+						 */  
+						</script> 当前登录用户： <a href="#">{$user}</a></h4>
+						 <div class="clearfix"></div>
+					 </div>
+					 <div class="content-grid-single">
+						 
+					 
+				 </div>			 			 
+	 </div>
+</div>
+<!--fotter-->
+<div class="fotter">
+	 <div class="container">
+		 <div class="col-md-4 fotter-info">
+			 <h3 style="color: yellow;">BOM软件商店</h3>
+			 <p>软件商店工作室，一家专门致力于推广计算机系统的平台，站长 zhang 是一位长期关注软件、互联网、移动应用与各种开发技术的IT爱好者，建立本站旨在与更多人分享使用电脑的快乐与精彩！</p>
+		 </div>
+		 <div class="col-md-4 fotter-list">
+			 <h3 style="color: yellow;">关于本站</h3>
+			 <ul>
+			 <li><a href="#">站长微博</a></li>
+			 <li><a href="#">联系站长</a></li>
+			 <li><a href="#">获取帮助</a></li>
+			 </ul>
+		 </div>
+		 <div class="col-md-4 fotter-media">
+				<h3 style="color: yellow;">分享至....</h3>
+				 <div class="social-icons">
+				 <a href="#"><span class="fb"> </span></a>
+				 <a href="#"><span class="twt"> </span></a>
+				 <a href="#"><span class="in"> </span></a>				 			 
+			    </div>
+		 </div>
+		 <div class="clearfix"></div>
+	 </div>
+</div>
+<!---fotter/-->
+<div class="copywrite">
+	 <div class="container">
+	 <p style="color: #FFF;">本站基于 &copy; {$list3.internet}+{$list3.computer}+{$list3.os}+{$list3.server}+{$list3.sqlku}+{$list3.phpmyadmin}+{$list3.environment} - 构建<a href="http://www.cssmoban.com/" target="_blank" title="模板之家">&nbsp; 版权所有</a> - 网站来自&nbsp;<a href="http://www.cssmoban.com/" title="网页模板" target="_blank">{$list3.webname}</a></p>
+</div>
+</div>
+<!---->
+<!---->
+<script type="text/javascript">
+		$(document).ready(function() {
+				/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+				*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
+});
+</script>
+<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+
+</body>
+</html>

@@ -1,0 +1,641 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>树莓派系统</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--适应像素-->
+  <meta name="description" content="树莓派, windows系统, 系统, Andriod, windows,ios" />
+  <meta name="keywords" content="树莓派, windows系统, 系统, Andriod, windows,ios" />
+  <!--网站搜索关键字-->
+  <link rel="shortcut icon" href="/os/public/favicon.ico" >  
+  <!--网站ico小图标-->
+  <link rel="stylesheet" href="/os/public/index/css/animate.css">
+  <!-- Icomoon Icon Fonts-->
+  <link rel="stylesheet" href="/os/public/index/css/icomoon.css">
+  <!-- 回到头部键  -->
+  <link rel="stylesheet" href="/os/public/index/css/bootstrap.css">
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="/os/public/index/css/magnific-popup.css">
+  <!-- Theme style  -->
+  <link rel="stylesheet" href="/os/public/index/css/style.css">
+  <!-- Modernizr JS -->
+<!-- css -->
+<link rel="stylesheet" id="genericons-css" href="/os/public/index/css/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentythirteen-style-css" href="/os/public/index/css/styleh.css" type="text/css" media="all">
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentythirteen-ie-css'  href='http://b1738918t3.iok.la/wordpress/wp-content/themes/twentythirteen/css/ie.css?ver=2013-07-18' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="/os/public/index/js/jquery.js"></script>
+<!--手机下拉菜单-->
+    <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+      <style type="text/css" id="twentythirteen-header-css">
+      .site-header {
+      background: url(/os/public/index/images/headers/star.png) no-repeat scroll top;
+      background-size: 1900px auto;
+    }
+    @media (max-width: 767px) {
+      .site-header {
+        background-size: 768px auto;
+      }
+    }
+    @media (max-width: 359px) {
+      .site-header {
+        background-size: 360px auto;
+      }
+    }
+    </style>
+  <link rel="stylesheet" type="text/css" href="/os/public/linuxshow/css/normal.css">
+  <link rel="stylesheet" type="text/css" href="/os/public/linuxshow/css/style.css">
+  <link rel="stylesheet" href="/os/public/linuxshow/css/animation.css">
+  <link href="/os/public/anniu/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/os/public/anniu/css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link rel="stylesheet" type="text/css" href="/os/public/index/css/component.css" />
+  <style type="text/css">
+a:active, a:hover { color: yellow;}
+</style>
+ </head>
+  <body>
+  <div class="content">
+          <div class="services-section" id="services">
+            <div class="container">
+              <div class="cbp-spmenu-push">
+                <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s2">
+                  <div class="logo1">
+                    <a href="index.html"><img src="/os/public/anniu/images/logo1.png"></a>
+                  </div>
+                  <ul>
+                    <li><a href="index.html" class="scroll" >Home</a></li>
+                    <li><a href="#about" class="scroll">关于树莓派</a></li>
+                    <li><a href="#service" class="scroll" >树莓派功能</a></li>
+                    <li><a href="#portfolio" class="scroll">应用展示</a></li> 
+                    <li><a href="#team" class="scroll">购买</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                  </ul>
+                </nav>
+                <div class="main">
+                  <section>
+                    <button id="showRight"><img src="/os/public/anniu/images/nav.png"></button>
+                  </section>
+                </div>
+              </div>
+  <script src="/os/public/anniu/js/classie.js"></script>
+    <script>
+      var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+        showRight = document.getElementById( 'showRight' ),
+        body = document.body;
+
+      showRight.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( menuRight, 'cbp-spmenu-open' );
+        disableOther( 'showRight' );
+      };
+
+      function disableOther( button ) {
+        if( button !== 'showRight' ) {
+          classie.toggle( showRight, 'disabled' );
+        }
+      }
+    </script> 
+    </div>
+    </div>
+    </div>
+
+    <header  class="site-header" >
+      <div class="home-link">
+        <h1 class="site-title" title="Windows创意者"><a href="" class="biaoti" style="color: black;">Bow爆软系统之raspberry pi</a></h1>
+        <div class="row">
+        <h2 class="site-description" style="float: left;">专门倒腾系统的网站--</h2>
+        <h4 style="margin-top: 3px;float: left;" title="查看用户资料">{$huanying}<a href="{:url('user/index')}?id={$list12.id}" style="color: red;">{$Request.session.username}</a></h4>
+        </div>
+      </div>
+      <div  class="navbar1">
+        <nav id="site-navigation" class="main-navigation navbar-default navbar-fixed-top" align="center">
+          <button class="menu-toggle">菜单</button>
+          <div class="btn-group">
+            <submit class="btn btn-default" onclick='window.location.href="{:url('index/index')}"' >首页</submit>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">win10系统<span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu">
+              {volist name="list5" id="vo"}
+                <li><a href="{:url('index/windows10')}?upbanben={$vo.upbanben}&&winbanben={$vo.winbanben}">{$vo.upbanben}{$vo.name}</a></li>
+              {/volist}
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">win8系统<span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu">
+              {volist name="list6" id="vo"}
+                <li><a href="{:url('index/windows8')}?upbanben={$vo.upbanben}&&winbanben={$vo.winbanben}">{$vo.upbanben}{$vo.name}</a></li>
+              {/volist}
+            </ul>
+          </div>
+          <div class="btn-group">
+            <submit class="btn btn-default" onclick='window.location.href="{:url('index/windows7')}?upbanben={$list7.upbanben}&&winbanben={$list7.winbanben}"' >win7系统</submit>
+          </div>
+          <div class="btn-group">
+            <submit class="btn btn-default" onclick='window.location.href="https://www.redhat.com/zh/2"' >Linux系统</submit>
+          </div>
+          <div class="btn-group">
+            <submit class="btn btn-default" onclick='window.location.href="{:url('index/raspberryshow')}"' >raspbain系统(树莓派)</submit>
+          </div>
+          <div class="btn-group">
+            <submit class="btn btn-default" onclick='window.location.href="{:url('soft/index')}"' >软件下载</submit>
+          </div>
+          <div class="btn-group">
+            <submit class="btn btn-default" onclick='window.location.href="http://127.0.0.1/blog"' >站主博客</submit>
+          </div>
+          <div class="btn-group">
+            <submit class="btn btn-default" onclick='window.location.href="{:url('video/index')}"' >短视频区</submit>
+          </div>
+             <form  method="get" class="search-form" action="{:url('index/search')}">
+        <label>
+          <span class="screen-reader-text">搜索：</span>
+          <input type="search" class="search-field" placeholder="搜索…" value="" name="name" title="搜索">
+        </label>
+        <input type="submit" class="search-submit" value="搜索">
+      </form>       
+      </nav><!-- #site-navigation -->
+      </div><!-- #navbar -->
+    </header><!-- #masthead -->
+<script type="text/javascript" src="/os/public/index/js/functions.js"></script> <!--手机下拉菜单-->
+  <div class="fh5co-loader"></div>
+  
+  <div id="page" style="height: auto;">
+  <nav class="fh5co-nav" role="navigation">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-2">
+          <div id="fh5co-logo"><a href="index.html" class="bianhua">BOW.</a></div>
+        </div>
+        <div class="col-xs-10 text-right menu-1">
+          <ul>
+            <li><a href="about.html">必备软件</a></li>
+            <li class="has-dropdown">
+              <a href="services.html">系统主题</a>
+              <ul class="dropdown">
+                <li><a href="#">Web Design</a></li>
+                <li><a href="#">eCommerce</a></li>
+                <li><a href="#">Branding</a></li>
+                <li><a href="#">API</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="#">专业软件</a>
+              <ul class="dropdown">
+                <li><a href="#">HTML5</a></li>
+                <li><a href="#">CSS3</a></li>
+                <li><a href="#">Sass</a></li>
+                <li><a href="#">jQuery</a></li>
+              </ul>
+            </li>
+            <li><a href="work.html">安卓应用</a></li>
+            <li><a href="contact.html">电脑安全知识</a></li>
+            <li><a href="contact.html">有趣的HTML5特效</a></li>
+            <li><a href="">64位系统与32位系统有什么区别？</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </nav>
+
+  <header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(/os/public/index/images/raspberry.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center">
+          <div class="display-t">
+            <div class="display-tc animate-box" data-animate-effect="fadeIn">
+              <h1>树莓派系统</h1>
+              <h2>如果还想了解更多关于raspberry pi -- <a href="https://www.raspberrypi.org/" class="bianhua" target="_blank" style="a:hover{color:yellow;}">访问官网</a></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+  </div>
+<div class="fix-header" >
+    <div class="w-container">
+      <div class="w-nav" data-collapse="medium" data-animation="default" data-duration="400"></div>
+    </div>
+  </div>
+ 
+  
+
+  <div class="exp service-parlex">
+    <div class="exp-back">
+      <div class="w-container">
+        <div id="who-v-animation">
+        <div class="wrap">
+          <div class="w-row exp-des">
+            <div class="w-col w-col-6 exp-col1">
+              <div class="col1-div">
+                <div class="experinc-box">
+                <h3 class="experinc-box-h3">树莓派上有什么</h3>
+                <p>它是一款基于ARM的微型电脑主板，以SD/MicroSD卡为内存硬盘，卡片主板周围有1/2/4个USB接口和一个10/100 以太网接口（A型没有网口），可连接键盘、鼠标和网线，同时拥有视频模拟信号的电视输出接口和HDMI高清视频输出接口，以上部件全部整合在一张仅比信用卡稍大的主板上，具备所有PC的基本功能只需接通电视机和键盘，就能执行如电子表格、文字处理、玩游戏、播放高清视频等诸多功能。 Raspberry Pi B款只提供电脑板，无内存、电源、键盘、机箱或连线。</p>
+                <div class="buttons">
+                  <div class="btn-ex-one">
+                    <a class="ex-btn" href="#">了解更多</a>
+                  </div>
+                  <div class="btn-ex-two">
+                    <a class="ex-btn-two" href="#">现在下载!</a>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+            <div class="w-col w-col-6 exp-col2">
+              <div class="col2-div">
+                <img src="/os/public/linuxshow/images/raspberrypi3b.gif">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <section class="service-parlex" id="service">
+    <section class="parlex-back">
+      <div class="w-container">
+        <div class="wrap">
+          <div class="service-combo">
+            <div class="services">
+              <h1 class="service-heading">树莓派能做些神马</h1>
+              <div class="services-text">功能展示</div>
+              <div class="sepreater service"></div>
+            </div>
+            <div class="services-text">“ Raspberry Pi(中文名为“树莓派”,简写为RPi是为学习计算机编程教育而设计，只有信用卡大小的微型电脑，其系统基于Linux”
+              <br> 随着Windows 10 IoT的发布，我们也将可以用上运行Windows的树莓派。自问世以来，受众多计算机发烧友和创客的追捧，曾经一“派”难求。别看其外表“娇小”，内“心”却很强大，视频、音频等功能通通皆有，可谓是“麻雀虽小，五脏俱全”。</div>
+            <div class="w-row">
+              <div class="w-col w-col-3 services-column">
+                <div class="service-icon">
+                  <img src="/os/public/linuxshow/images/services/Web-Design-Development.png">
+                </div>
+                <h4 class="service-head">Linux 窗口操作</h4>
+              </div>
+              <div class="w-col w-col-3">
+                <div class="service-icon">
+                  <img src="/os/public/linuxshow/images/services/Branding-Identity.png">
+                </div>
+                <h4 class="service-head">编写脚本语言</h4>
+              </div>
+              <div class="w-col w-col-3">
+                                <div class="service-icon">
+                  <img src="/os/public/linuxshow/images/services/Motion-Video.png">
+                </div>
+                <h4 class="service-head">打造家庭影院</h4>
+              </div>
+              <div class="w-col w-col-3">
+                <div class="service-icon">
+                  <img src="/os/public/linuxshow/images/services/UX-UI.png">
+                </div>
+                <h4 class="service-head">搭建个人网站</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+
+
+  <div class="process-parlex">
+    <div class="parlex2-back">
+      <div class="w-container">
+        <div class="wrap">
+          <div class="process">
+            <h1 class="our-process-heading">树莓派的应用</h1>
+            <div class="sepreater"></div>
+          </div>
+          <div class="process-text">
+            <div class="process-text">Our process is straight forward, simple, &amp; successful.</div>
+            <div class="w-row">
+              <div class="w-col w-col-3">
+                <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a">
+                   <a href="#set-1" class="hi-icon hi-icon-locked">Security</a>
+                </div>
+                <h4 class="our-process-sys">加密系统更安全</h4>
+                <p class="process-paragraph">另外就是因为他的开源，任何的系统漏洞都会被民间高手，或者是官方人员很快的发现。从漏洞的发现到补丁的放出，时间相当短，没有时间给病毒或者黑客作乱的机会。然后就是linux的权限管理，linux的权限管理很严格。</p>
+              </div>
+              <div class="w-col w-col-3">
+                <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a">
+          <a href="#set-1" class="hi-icon hi-icon-mobile">Mobile</a>
+        </div>
+                <h4 class="our-process-sys">轻便的移动端</h4>
+                <p class="process-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo
+                  cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+              </div>
+              <div class="w-col w-col-3">
+                <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a">
+          <a href="#set-1" class="hi-icon hi-icon-screen">Desktop</a>
+        </div>
+                <h4 class="our-process-sys">硬件俱全的电脑</h4>
+                <p class="process-paragraph">就像其他任何一台运行Linux 系统的台式计算机或者便携式计算机那样，利用Raspberry Pi可以做很多事情。当然，也难免有一点点不同。普通的计算机主板都是依靠硬盘来存储数据，但是RaspberryPi来说使用SD卡作为“硬盘”，你也可以外接USB硬盘。利用Raspberry Pi可以编辑Office文档、浏览网页、玩游戏—即使玩需要强大的图形加速器支持的游戏也没有问题。</p>
+              </div>
+              <div class="w-col w-col-3">
+                <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a">
+          <a href="#set-1" class="hi-icon hi-icon-earth">Partners</a>
+        </div>
+                <h4 class="our-process-sys">受欢迎的小电脑</h4>
+                <p class="process-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo
+                  cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="portfolio-parlex" id="portfolio">
+    <div class="parlex3-back">
+      <div class="w-container">
+        <div class="wrap">
+          <div class="portfolio">
+            <h1 class="portfolio-heading">应用展示</h1>
+            <div class="portfolio-text">OUR WORK</div>
+            <div class="sepreater"></div>
+          </div>
+          <p class="porfolio-paragraph">THE BEST RESULTS ARE OBTAINED BY TASKING THE RIGHT PEOPLE TO THE RIGHT PROJECT
+            <br>We do what we love. Our clients love what we do.</p>
+            <div class="container demo-1" style="width: 100%;">
+      <ul class="grid cs-style-1">
+        <li>
+          <figure>
+            <img class="portfolio-images" src="/os/public/linuxshow/images/portfolio/1.jpg" alt="img01">
+            <figcaption>
+              <h3>Camera</h3>
+              <span>Jacob Cummings</span>
+              <a href="#">Take a look</a>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img class="portfolio-images" src="/os/public/linuxshow/images/portfolio/2.jpg" alt="img02">
+            <figcaption>
+              <h3>Music</h3>
+              <span>Jacob Cummings</span>
+              <a href="#">Take a look</a>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img class="portfolio-images" src="/os/public/linuxshow/images/portfolio/4.jpg" alt="img04">
+            <figcaption>
+              <h3>Settings</h3>
+              <span>Jacob Cummings</span>
+              <a href="#">Take a look</a>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img class="portfolio-images" src="/os/public/linuxshow/images/portfolio/5.jpg" alt="img05">
+            <figcaption>
+              <h3>Safari</h3>
+              <span>Jacob Cummings</span>
+              <a href="#">Take a look</a>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img class="portfolio-images" src="/os/public/linuxshow/images/portfolio/3.jpg" alt="img03">
+            <figcaption>
+              <h3>Phone</h3>
+              <span>Jacob Cummings</span>
+              <a href="#">Take a look</a>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img class="portfolio-images" src="/os/public/linuxshow/images/portfolio/6.jpg" alt="img06">
+            <figcaption>
+              <h3>Game Center</h3>
+              <span>Jacob Cummings</span>
+              <a href="#">Take a look</a>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img class="portfolio-images" src="/os/public/linuxshow/images/portfolio/7.jpg" alt="img06">
+            <figcaption>
+              <h3>Game Center</h3>
+              <span>Jacob Cummings</span>
+              <a href="#">Take a look</a>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img class="portfolio-images" src="/os/public/linuxshow/images/portfolio/8.jpg" alt="img06">
+            <figcaption>
+              <h3>Game Center</h3>
+              <span>Jacob Cummings</span>
+              <a href="#">Take a look</a>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img class="portfolio-images" src="/os/public/linuxshow/images/portfolio/9.jpg" alt="img06">
+            <figcaption>
+              <h3>Game Center</h3>
+              <span>Jacob Cummings</span>
+              <a href="#">Take a look</a>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </div><!-- /container -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="clients-parlex">
+    <div class="parlex6-back">
+      <div class="w-container">
+        <div class="wrap-client">
+          <div class="clients-sub">
+            <div id="clients">
+        <div class="clients-wrap">
+          <ul id="clients-list" class="clearfix">
+            <li><img src="/os/public/linuxshow/images/clients/client-logo1.png" alt="logo"></li>
+            <li><img src="/os/public/linuxshow/images/clients/client-logo2.png" alt="logo"></li>
+            <li><img src="/os/public/linuxshow/images/clients/client-logo3.png" alt="logo"></li>
+            <li><img src="/os/public/linuxshow/images/clients/client-logo4.png" alt="logo"></li>
+            <li><img src="/os/public/linuxshow/images/clients/client-logo5.png" alt="logo"></li>
+            <li><img src="/os/public/linuxshow/images/clients/client-logo6.png" alt="logo"></li>
+          </ul>
+        </div><!-- @end .clients-wrap -->
+      </div><!-- @end #clients -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >手机网站模板</a></div>
+
+
+
+  <div class="contact-parlex" id="contact">
+    <div class="parlex8-back">
+      <div class="w-container">
+        
+      </div>
+      
+    
+     
+      <div class="w-container">
+        <div class="w-row contact-col">
+          <div class="w-col w-col-4 contact-col1">
+            <div>
+                      <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a">
+                       <a href="#set-5" class="hi-icon hi-icon-earth">Partners</a>
+                    </div>
+              <h4 class="contact-col-head">Visit Us</h4>
+            </div>
+            <div>
+              <div class="contact-col-text">795 Folsom St., Suite 600
+                <br>San Francisco, CA 94107</div>
+            </div>
+          </div>
+          <div class="w-col w-col-4 contact-col2">
+            <div>
+               <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a">
+                       <a href="#set-5" class="hi-icon hi-icon-mail">Partners</a>
+                    </div>
+              <h4 class="contact-col-head">Mail us</h4>
+            </div>
+            <div>
+              <div class="contact-col-text">general: office@elegance.com
+                <br>support: support@elegance.com</div>
+            </div>
+          </div>
+          <div class="w-col w-col-4 contact-col3">
+            <div>
+              <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a">
+                       <a href="#set-5" class="hi-icon hi-icon-mobile">Partners</a>
+                    </div>
+              <h4 class="contact-col-head">Call Us</h4>
+            </div>
+            <div>
+              <div class="contact-col-text-bar-last">P: (452) 123-8970
+                <br>F: (452) 123-8971</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="footer-parlex">
+    <div class="parlex9-back">
+      <div class="w-container">
+        <div class="wrap">
+          <img class="footer-logo" src="/os/public/linuxshow/images/logo1.png" alt="Elegance">
+          <div class="footer-social">
+            <div class="fotter-social-wrap">
+              <a href="https://www.facebook.com/"><img class="fotter-social" src="/os/public/linuxshow/images/social/Facebook.png" alt="52dd249c929b601f5400054c_Facebook.png"></a>
+              <a href="https://www.twitter.com/"><img class="fotter-social" src="/os/public/linuxshow/images/social/Twitter.png" alt="52dd24f2929b601f54000551_Twitter.png"></a>
+              <a href="https://plus.google.com/"><img class="fotter-social" src="/os/public/linuxshow/images/social/Google-plus.png" alt="52dd26a55b54031d540005af_Google-plus.png"></a>
+              <a href="https://www.blogger.com/"><img class="fotter-social" src="/os/public/linuxshow/images/social/Blogger.png" alt="52de52e7b6d2171f78000414_Blogger.png"></a>
+              <a href="https://www.digg.com/"><img class="fotter-social" src="/os/public/linuxshow/images/social/Digg.png" alt="52de53174702a71e780003c3_Digg.png"></a>
+              <a href="https://www.pinterest.com/"><img class="fotter-social" src="/os/public/linuxshow/images/social/Pinterest.png" alt="52de533c5d3566c1430003e9_Pinterest.png"></a>
+              <a href="https://www.flicker.com/"><img class="fotter-social" src="/os/public/linuxshow/images/social/Flickr.png" alt="52de535f1b42bfc24300049e_Flickr.png"></a>
+              <a href="https://www.vimeo.com/"><img class="fotter-social" src="/os/public/linuxshow/images/social/Vimeo.png" alt="52de537cb6d2171f7800041c_Vimeo.png"></a>
+              <a href="https://www.myspace.com/"><img class="fotter-social" src="/os/public/linuxshow/images/social/Myspace.png" alt="52de53954702a71e780003c5_Myspace.png"></a>
+              <a href="https://www.stumbleupon.com/"><img class="fotter-social" src="/os/public/linuxshow/images/social/Stumbleupn.png" alt="52de53c0b6d2171f7800041e_Stumbleupn.png"></a>
+              <a href="https://www.tumblr.com/"><img class="fotter-social" src="/os/public/linuxshow/images/social/Tumblr.png" alt="52de54021b42bfc2430004a3_Tumblr.png"></a>
+              <a href="https://www.youtube.com/"><img class="fotter-social" src="/os/public/linuxshow/images/social/Youtube.png" alt="52de54495d3566c14300040a_Youtube.png"></a>
+            </div>
+          </div>
+          <div>
+            <div class="fotter-text"><p class="fotter-quote">“ THE LIGHT WITHIN US BOWS TO THE LIGHT WITHIN YOU. ”</p>
+              <p class="copyright-area">本站基于{$list3.internet}+{$list3.computer}+{$list3.os}+{$list3.server}+{$list3.sqlku}+{$list3.phpmyadmin}+{$list3.environment} 构建 版权所有 
+              <a href="{:url('index/index')}" style="color: #93c8ff;">{$list3.webname}</a></p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+
+  <script type="text/javascript" src="/os/public/linuxshow/js/jquery.js"></script>
+  <script type="text/javascript" src="/os/public/linuxshow/js/normal.js"></script>
+  <script type="text/javascript" src="/os/public/linuxshow/js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="/os/public/linuxshow/js/carousels.js"></script>
+  <script type="text/javascript" src="/os/public/linuxshow/js/slider-modernizr.js"></script>
+  <script src="/os/public/linuxshow/js/classie.js"></script>
+  <script src="/os/public/linuxshow/js/portfolio-effects.js"></script>
+  <script src="/os/public/linuxshow/js/toucheffects.js"></script>
+  <script src="/os/public/linuxshow/js/modernizr.js"></script>
+  <script src="/os/public/linuxshow/js/animation.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+  </div>
+
+  <!-- jQuery -->
+  <script src="/os/public/index/js/jquery.min.js"></script>
+  <!-- jQuery Easing -->
+  <script src="/os/public/index/js/jquery.easing.1.3.js"></script>
+  <!-- Bootstrap -->
+  <script src="/os/public/index/js/bootstrap.min.js"></script>
+  <!-- Waypoints -->
+  <script src="/os/public/index/js/jquery.waypoints.min.js"></script>
+  <!-- countTo -->
+  <script src="/os/public/index/js/jquery.countTo.js"></script>
+  <!-- Magnific Popup -->
+  <script src="/os/public/index/js/jquery.magnific-popup.min.js"></script>
+  <script src="/os/public/index/js/magnific-popup-options.js"></script>
+  <!-- Main -->
+  <script src="/os/public/index/js/main.js"></script>
+
+  </body>
+</html>
+

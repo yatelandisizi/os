@@ -1,0 +1,337 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>软件下载</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="树莓派, windows系统, 系统, Andriod, windows,ios" />
+	<meta name="keywords" content="树莓派, windows系统, 系统, Andriod, windows,ios" />
+    <!--网站搜索关键字-->
+	<link rel="shortcut icon" href="/os/public/favicon.ico" >  
+	<!--网站ico小图标-->
+	<link rel="stylesheet" href="/os/public/index/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="/os/public/index/css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="/os/public/index/css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/os/public/index/css/magnific-popup.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="/os/public/index/css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="/os/public/index/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="/os/public/index/js/respond.min.js"></script>
+	<![endif]-->
+<!-- css -->
+	<link rel="stylesheet" href="/os/public/index/css/stylefooter.css" type="text/css" media="all" />
+	<style type="text/css">
+a:link, a:visited { color: #93c8ff; text-decoration: none;} 
+a:active, a:hover { color: yellow;}
+</style>
+<link rel="stylesheet" id="genericons-css" href="/os/public/index/css/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentythirteen-style-css" href="/os/public/index/css/styleh.css" type="text/css" media="all">
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentythirteen-ie-css'  href='http://b1738918t3.iok.la/wordpress/wp-content/themes/twentythirteen//os/public/index/css/ie.css?ver=2013-07-18' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="/os/public/index/js/jquery.js"></script>
+
+
+
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+			<style type="text/css" id="twentythirteen-header-css">
+			.site-header {
+			background: url(/os/public/index/images/headers/star.png) no-repeat scroll top;
+			background-size: 1900px auto;
+		}
+		@media (max-width: 767px) {
+			.site-header {
+				background-size: 768px auto;
+			}
+		}
+		@media (max-width: 359px) {
+			.site-header {
+				background-size: 360px auto;
+			}
+		}
+		</style>
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script> 
+<!--刷新时回到头部-->
+<!-- js -->
+<link href="/os/public/index/css/bootstrapheader.css" rel="stylesheet" type="text/css" media="all">
+<!--底部字体变大-->
+	</head>
+	<body style="background-image:url(/os/public/index/images/cardboard.jpg);">
+		<header  class="site-header" >
+			<div class="home-link">
+				<h1 class="site-title" title="Windows创意者"><a href="" class="biaoti" style="color: black;">BOM软件商店</a></h1>
+				<div class="row">
+				<h2 class="site-description" style="float: left;">专门倒腾系统的网站--</h2>
+				<h4 style="margin-top: 8px;" title="查看用户资料">{$huanying}<a href="{:url('user/index')}?id={$list12.id}" style="color: red;">{$Request.session.username}</a></h4>
+				</div>
+			</div>
+			<div  class="navbar1">
+				<nav id="site-navigation" class="main-navigation navbar-default navbar-fixed-top" align="center">
+					<button class="menu-toggle">菜单</button>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="{:url('index/index')}"' >首页</submit>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">win10系统<span class="caret"></span></button>
+						<ul class="dropdown-menu" role="menu">
+							{volist name="list5" id="vo"}
+								<li><a href="{:url('index/windows10')}?upbanben={$vo.upbanben}&&winbanben={$vo.winbanben}">{$vo.upbanben}{$vo.name}</a></li>
+							{/volist}
+						</ul>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">win8系统<span class="caret"></span></button>
+						<ul class="dropdown-menu" role="menu">
+							{volist name="list6" id="vo"}
+								<li><a href="{:url('index/windows8')}?upbanben={$vo.upbanben}&&winbanben={$vo.winbanben}">{$vo.upbanben}{$vo.name}</a></li>
+							{/volist}
+						</ul>
+					</div>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="{:url('index/windows7')}?upbanben={$list7.upbanben}&&winbanben={$list7.winbanben}"' >win7系统</submit>
+					</div>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="https://www.redhat.com/zh/2"' >Linux系统</submit>
+					</div>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="{:url('index/raspberryshow')}"' >raspbain系统(树莓派)</submit>
+					</div>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="{:url('soft/index')}"' >软件下载</submit>
+					</div>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="http://127.0.0.1/blog"' >站主博客</submit>
+					</div>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="{:url('video/index')}"' >短视频区</submit>
+					</div>
+             <form  method="get" class="search-form" action="{:url('index/search')}">
+				<label>
+					<span class="screen-reader-text">搜索：</span>
+					<input type="search" class="search-field" placeholder="搜索…" value="" name="name" title="搜索">
+				</label>
+				<input type="submit" class="search-submit" value="搜索">
+			</form>						
+			</nav><!-- #site-navigation -->
+			</div><!-- #navbar -->
+		</header><!-- #masthead -->
+<script type="text/javascript" src="/os/public/index/js/functions.js"></script> <!--手机下拉菜单-->
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2">
+					<div id="fh5co-logo"><a href="index.html" class="bianhua">BOM.</a></div>
+				</div>
+				<div class="col-xs-10 text-right menu-1">
+					<ul>
+						<li><a href="about.html">必备软件</a></li>
+						<li class="has-dropdown">
+							<a href="services.html">系统主题</a>
+							<ul class="dropdown">
+								<li><a href="#">Web Design</a></li>
+								<li><a href="#">eCommerce</a></li>
+								<li><a href="#">Branding</a></li>
+								<li><a href="#">API</a></li>
+							</ul>
+						</li>
+						<li class="has-dropdown">
+							<a href="#">专业软件</a>
+							<ul class="dropdown">
+								<li><a href="#">HTML5</a></li>
+								<li><a href="#">CSS3</a></li>
+								<li><a href="#">Sass</a></li>
+								<li><a href="#">jQuery</a></li>
+							</ul>
+						</li>
+						<li><a href="work.html">安卓应用</a></li>
+						<li><a href="contact.html">电脑安全知识</a></li>
+						<li><a href="contact.html">有趣的HTML5特效</a></li>
+						<li><a href="">64位系统与32位系统有什么区别？</a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+
+	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(/os/public/index/images/img_bg_2.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1>软件下载</h1>
+							<h2>我们不会生产软件<a href="#" target="_blank">freehtml5.co</a></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div id="fh5co-portfolio">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>电脑实用软件</h2>
+					<p>这里汇聚着现今非常流行的专业软件，并提供免费下载</p>
+				</div>
+			</div>
+			<div class="row">
+				{volist name="list" id="vo"}
+					<div class="col-md-4 col-sm-4 text-center animate-box">
+						<div class="work-grid" style="background-image: url({$vo.photo});">
+							<div class="desc">
+								<h3><a href="#">{$vo.name}</a></h3>
+								<span class="cat">{$vo.type}</span>
+								<p>
+									<span class="download"><a href="#"><i class="icon-download"></i></a></span>
+									<span class="love"><a href="#"><i class="icon-heart"></i></a></span>
+								</p>
+							</div>
+						</div>
+					</div>
+				{/volist}
+			</div>
+			<div class="pages">
+				<ul>
+					<li class="active">{$list->render()}</li>
+				</ul>
+			</div>	
+	</div>
+
+	<div id="fh5co-started">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>订阅我们</h2>
+					<p>将你的电子邮件告诉我们，您的邮箱将会获得我们的最新推送。</p>
+				</div>
+			</div>
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2">
+					<form class="form-inline">
+						<div class="col-md-6 col-sm-6">
+							<div class="form-group">
+								<label for="email" class="sr-only">Email</label>
+								<input type="email" class="form-control" id="email" placeholder="Email">
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6">
+							<button type="submit" class="btn btn-default btn-block">订阅</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 fh5co-widget">
+					<h3>BOM软件商店</h3>
+					<p>系统工作室，一家专门致力于推广计算机系统的平台，站长 zhang 是一位长期关注 软件、互联网、移动应用与各种开发技术 的IT爱好者，建立本站旨在与更多人分享使用电脑的快乐与精彩！</p>
+					<p><a href="#" class="lianjie bianhua">Learn More</a></p>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+						<li><a href="#">关于本站</a></li>
+						<li><a href="#">站长微博</a></li>
+						<li><a href="#">联系站长</a></li>
+						<li><a href="#">我想留言</a></li>
+						<li><a href="#">获取帮助</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+						<li><a href="#">正版商店</a></li>
+						<li><a href="#">正版推荐</a></li>
+						<li><a href="#">广告招商</a></li>
+						<li><a href="#">技术推荐</a></li>
+						<li><a href="#">加入我们</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+						<li><a href="https://www.apple.com/cn//?afid=p238%7C1m22G5hTh-dc_mtid_18707vxu38484_pcrid_14761751267_&cid=aos-cn-kwba-brand">苹果官网</a></li>
+						<li><a href="https://www.microsoft.com/zh-cn/">微软官网</a></li>
+						<li><a href="https://www.google.com.hk/">谷歌官网</a></li>
+						<li><a href="https://www.jd.com/">京东商城</a></li>
+						<li><a href="https://www.amazon.cn/">亚马逊官网</a></li>
+					</ul>
+				</div>
+			</div>
+            <tr align="center" bgcolor="#d644e9" width="100%">
+                <td>
+                    <div align="center" style="border-radius:15px;opacity:.8;background-color: #b641b6;">
+                        <div>
+                            <a class="bianhua" href="#">关于我们</a>&nbsp;｜&nbsp;
+                            <a class="bianhua" href="#">媒体报道</a>&nbsp;｜&nbsp;
+                            <a class="bianhua" href="#">品牌招商</a>&nbsp;｜&nbsp;
+                            <a class="bianhua" href="#">隐私条款</a>&nbsp;｜&nbsp;
+                            <a href="#" class="bianhua">友情链接</a>&nbsp;｜&nbsp;
+                            <a class="bianhua" href="#">系统地图</a>
+                        </div>
+                        <div style="color: #FFF">
+                        Copyright ? www.BOM.com，All Rights Reserved 冀ICP备08114786号-1 许可证：冀B2-20080329<br/>
+                        本站基于{$list3.internet}+{$list3.computer}+{$list3.os}+{$list3.server}+{$list3.sqlku}+{$list3.phpmyadmin}+{$list3.environment} 构建 版权所有 {$list3.webname}
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <div class="keep">
+	            <div class="container">
+		            <ul>
+			            <li><a class="facebook bianhua" href="https://www.facebook.com/"></a></li>
+			            <li><a class="twitter bianhua" href="https://www.twitter.com/"></a></li>
+			            <li><a class="googl bianhua" href="https://www.google.com.hk/"></a></li>
+			            <li><a class="message bianhua" href="#"></a></li>
+		            </ul>
+	            </div>
+            </div>
+        <!--//keep in touch-->
+        </div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="/os/public/index/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/os/public/index/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/os/public/index/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="/os/public/index/js/jquery.waypoints.min.js"></script>
+	<!-- countTo -->
+	<script src="/os/public/index/js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="/os/public/index/js/jquery.magnific-popup.min.js"></script>
+	<script src="/os/public/index/js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="/os/public/index/js/main.js"></script>
+
+	</body>
+</html>
+

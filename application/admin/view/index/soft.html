@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/os/public/favicon.ico" >  
+    <!--网站ico小图标-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>软件列表</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <link href="/os/public/admin/css/bootstrap.min.css" rel="stylesheet" />
+    <!--  主要样式    -->
+    <link href="/os/public/admin/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+    <!-- 放大样式   -->
+</head>
+<body class="beijing">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-plain">
+                            <div class="header">
+                                <h4 class="title">软件管理系统：</h4>
+                                <p class="category">所有软件：</p>
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <th>图片</th>
+                                        <th colspan="2" align="center">软件信息:</th>
+                                        <th align="center">操作：</th>
+                                    </thead> 
+                                    <tbody style="font-size: 16px;">
+                                        {volist name="list" id="vo"}
+                                            <tr>
+                                                <td width="250" height="250" rowspan="3"><img src="{$vo.photo}" width="250" height="250"></td>
+                                                <td>软件名称：{$vo.name}</td>
+                                                <td>软件类型：{$vo.type}</td>
+                                                <td align="center"><a href="{:url('index/softupdata')}?id={$vo.id}" class="alert alert-warning">修改</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>运行环境：{$vo.environment}</td>
+                                                <td>更新时间：{$vo.uptime}</td>
+                                                <td align="center"><a href="{:url('index/softdel')}?id={$vo.id}" class="alert alert-danger">删除</a></td>
+                                            </tr>
+                                            <tr> 
+                                                <td>支持语言：{$vo.language}</td>
+                                                <td>软件大小：{$vo.size}</td>
+                                                <td>下载次数：{$vo.frequency}</td>
+                                            </tr>
+                                        {/volist}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

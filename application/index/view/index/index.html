@@ -1,0 +1,770 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>win10创意者正式官方原版ios镜像下载</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--适应分辨率-->
+	<meta name="description" content="树莓派, windows系统, 系统, Andriod, windows,ios" />
+	<meta name="keywords" content="树莓派, windows系统, 系统, Andriod, windows,ios" />
+    <!--网站搜索关键字-->
+	<link rel="shortcut icon" href="/os/public/favicon.ico" >  
+	<!--网站ico小图标-->
+	<link rel="stylesheet" href="/os/public/index/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="/os/public/index/css/icomoon.css">
+	<!--图标样式-->
+	<link rel="stylesheet" href="/os/public/index/css/bootstrap.css">  
+	<!--重要样式-->
+    <link href="/os/public/index/css/bootstraphead.css" rel="stylesheet" type="text/css" media="all" />
+    <!--字体样式-->
+	<link rel="stylesheet" href="/os/public/index/css/style.css">
+	<!--重要样式-->
+	<link rel="stylesheet" href="/os/public/index/css/magnific-popup.css">
+	<!--小屏幕-->
+	<script src="/os/public/index/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script> <!--刷新时回到头部-->
+<!-- js -->
+<link rel="stylesheet" href="/os/public/index/css/stylefooter.css" type="text/css" media="all" />  
+<!--底部样式-->
+<link href="/os/public/index/css/bootstrapheader.css" rel="stylesheet" type="text/css" media="all">
+<!--快捷访问样式-->
+<link href="/os/public/index/css/styleheader.css" rel="stylesheet" type="text/css" media="all" />
+<!--logo头部样式-->
+<script src="/os/public/index/js/jquery-1.8.3.min.js"></script>
+<!--快捷滚动特效-->
+ <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script><!--快捷滚动特效-->
+    <link rel="stylesheet" type="text/css" href="/os/public/index/css/component.css" />
+    <!--logo头部样式-->
+<style type="text/css">
+    a:link, a:visited { color: #93c8ff; text-decoration: none;} 
+    a:active, a:hover { color: yellow;}
+</style>
+<link rel="stylesheet" id="genericons-css" href="/os/public/index/css/genericons.css" type="text/css" media="all">
+<!--手机导航下拉菜单-->
+<link rel="stylesheet" id="twentythirteen-style-css" href="/os/public/index/css/styleh.css" type="text/css" media="all">
+<!--头部样式-->
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+			<style type="text/css" id="twentythirteen-header-css">
+			.site-header {
+			background: url(/os/public/index/images/headers/star.png) no-repeat scroll top;
+			background-size: 1900px auto;
+		}
+		@media (max-width: 767px) {
+			.site-header {
+				background-size: 768px auto;
+			}
+		}
+		@media (max-width: 359px) {
+			.site-header {
+				background-size: 360px auto;
+			}
+		}
+		body{background:url(/os/public/index/images/cardboard.jpg);}
+		</style>
+		<link href="/os/public/index/css/zns_common.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+	<div class="tianqi">
+	<iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=1" class="tou1" height="20" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+	<a href="{:url('login/index')}" class="bianhua lianjie submit tou">{$denglu}</a>
+	<a href="{:url('zhuce/index')}" class="bianhua lianjie submit">注册</a>
+	<a href="{:url('login/logout')}" class="bianhua lianjie submit">{$zhuxiao}</a>
+	<a href="{:url('index/jifen')}?id={$list12.id}" class="bianhua lianjie submit">{$qiandao}</a>
+	</div>
+	<header  class="site-header" >
+			<div class="home-link">
+				<h1 class="site-title" title="Windows创意者"><a href="" class="biaoti" style="color: black;">BOM软件商店</a></h1>
+				<div class="row">
+				<h2 class="site-description" style="float: left;">专门倒腾系统的网站--</h2>
+				<h4 style="margin-top: 8px;" title="查看用户资料">{$huanying}<a href="{:url('user/index')}?id={$list12.id}" style="color: red;">{$Request.session.username}</a></h4>
+				</div>
+			</div>
+			<div  class="navbar1">
+				<nav id="site-navigation" class="main-navigation navbar-default navbar-fixed-top" align="center">
+					<button class="menu-toggle">菜单</button>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="{:url('index/index')}"' >首页</submit>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">win10系统<span class="caret"></span></button>
+						<ul class="dropdown-menu" role="menu">
+							{volist name="list" id="vo"}
+								<li><a href="{:url('index/windows10')}?upbanben={$vo.upbanben}&&winbanben={$vo.winbanben}">{$vo.upbanben}{$vo.name}</a></li>
+							{/volist}
+						</ul>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">win8系统<span class="caret"></span></button>
+						<ul class="dropdown-menu" role="menu">
+							{volist name="list1" id="vo"}
+								<li><a href="{:url('index/windows8')}?upbanben={$vo.upbanben}&&winbanben={$vo.winbanben}">{$vo.upbanben}{$vo.name}</a></li>
+							{/volist}
+						</ul>
+					</div>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="{:url('index/windows7')}?upbanben={$list2.upbanben}&&winbanben={$list2.winbanben}"' >win7系统</submit>
+					</div>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="https://www.redhat.com/zh/2"'>Linux系统</submit>
+					</div>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="{:url('index/raspberryshow')}"'>raspbain(树莓派)</submit>
+					</div>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="{:url('soft/index')}"' >软件下载</submit>
+					</div>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="http://127.0.0.1/blog"' >站主博客</submit>
+					</div>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="{:url('video/index')}"' >短视频区</submit>
+					</div>
+             <form  method="get" class="search-form" action="{:url('index/search')}">
+				<label>
+					<span class="screen-reader-text">搜索：</span>
+					<input type="search" class="search-field" placeholder="搜索…" value="" name="name" title="搜索">
+				</label>
+				<input type="submit" class="search-submit" value="搜索">
+			</form>				
+			</nav><!-- #site-navigation -->
+			</div><!-- #navbar -->
+		</header><!-- #masthead -->
+<script type="text/javascript" src="/os/public/index/js/functions.js"></script> <!--手机下拉菜单-->
+<div class="fh5co-loader"></div>
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2">
+					<div id="fh5co-logo"><a href="index.html" class="bianhua">BOM.</a></div>
+				</div>
+				<div class="col-xs-10 text-right menu-1">
+					<ul>
+						<li class="has-dropdown">
+							<a href="services.html">系统主题</a>
+							<ul class="dropdown">
+								<li><a href="#">Web Design</a></li>
+								<li><a href="#">eCommerce</a></li>
+								<li><a href="#">Branding</a></li>
+								<li><a href="#">API</a></li>
+							</ul>
+						</li>
+						<li><a href="work.html">安卓应用</a></li>
+						<li><a href="contact.html">电脑安全知识</a></li>
+						<li><a href="contact.html">有趣的HTML5特效</a></li>
+						<li><a href="">64位系统与32位系统有什么区别？</a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+<header id="fh5co-header" class="fh5co-cover" role="banner">
+		<div></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 text-center">
+					<div class="display-t">
+
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+						<div class="logo" style="margin-top: 0px;">
+					<a href="index.html"><img src="/os/public/index/images/logo1.png"></a>
+					    </div>
+							<h1>我们是BOM软件商店</h1>
+							<h2 >我们的Win系统均来自 <a href="" target="_blank" title="Microsoft中国官网"  class="bianhua">Microsoft</a> - 微软官方 <a href="" title="什么是纯净系统？" target="_blank" class="bianhua">iSO纯净镜像</a></h2>
+							<p><a href="" class="btn btn-default">如何安装并激活Windows系统？</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+<div class="header" id="home">
+			<div class="container">
+				</div>
+			</div>
+				<div class="content">
+					<div class="services-section" id="services">
+						<div class="container">
+						
+	<script src="/os/public/index/js/classie.js"></script><!--快捷访问滚动-->
+		<script>
+			var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+				showRight = document.getElementById( 'showRight' ),
+				body = document.body;
+
+			showRight.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( menuRight, 'cbp-spmenu-open' );
+				disableOther( 'showRight' );
+			};
+
+			function disableOther( button ) {
+				if( button !== 'showRight' ) {
+					classie.toggle( showRight, 'disabled' );
+				}
+			}
+		</script><!--快捷访问滚动-->
+			<div class="services-header">
+							<h1>{$list6.title1}</h1>
+								<p>{$list6.introduce1}</p>
+			</div>
+			<div class="services-grids">
+				<div class="col-md-4 services-grid">
+					<img src="{$list6.photo1}">
+					<h3>{$list6.title2}</h3>
+					<p>{$list6.introduce2}</p>
+				</div>
+				<div class="col-md-4 services-grid">
+					<img src="{$list6.photo2}">
+					<h3>{$list6.title3}</h3>
+					<p>{$list6.introduce3}</p>
+				</div>
+				<div class="col-md-4 services-grid">
+					<img src="{$list6.photo3}">
+					<h3>{$list6.title4}</h3>
+					<p>{$list6.introduce4}</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+   </div>				
+</div>
+
+<div class="fh5co-loader"></div>
+  <div id="page">
+	
+	
+
+    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >手机网站模板</a></div>
+	
+	
+    
+	<div class="fh5co-bg-section">
+		<div class="container">
+			<div class="row">
+				<div id="fh5co-features-2">
+				<div class="about-section" id="about"></div><!--滑动网页标记-->
+				
+					<div class="col-feature-9">
+						<div class="row">
+							<div class="col-md-12 fh5co-heading animate-box">
+								<h2 style="font-size: 55px;">{$list7.title1}</h2>
+								<p style="color: #FFF">{$list7.introduce1}----- <a href="" class="bianhua">点击进入下载</a> </p>
+							</div>
+						</div>
+						
+							<div class="row">
+								<div class="feature-left animate-box col-md-4 col-sm-4" data-animate-effect="fadeInLeft"><br>
+									<span class="icon">
+										<i class="icon-check"></i>
+									</span>
+									<div class="feature-copy">
+										<h3>{$list7.title2}</h3>
+										<p>{$list7.introduce2}</p>
+									</div>
+								</div>
+
+								<div class="feature-left animate-box col-md-4 col-sm-4" data-animate-effect="fadeInLeft"><br>
+									<span class="icon">
+										<i class="icon-check"></i>
+									</span>
+									<div class="feature-copy">
+										<h3>{$list7.title3}</h3>
+										<p>{$list7.introduce2}</p>
+									</div>
+								</div>
+
+								<div class="feature-left animate-box col-md-4 col-sm-4" data-animate-effect="fadeInLeft"><br>
+									<span class="icon">
+										<i class="icon-check"></i>
+									</span>
+									<div class="feature-copy">
+										<h3>{$list7.title4}</h3>
+										<p>{$list7.introduce2}</p>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<div class="col-feature-3">
+						<div id="fh5co-counter" class="fh5co-bg fh5co-counter">
+							<div class="row">
+								<div class="display-t">
+									<div class="display-tc">
+										<div class="col-md-12 animate-box">
+											<div class="feature-center">
+												<span class="counter js-counter" data-to="{$filecount}">1</span>
+												<span class="counter-label">拥有资源</span>
+											</div>
+										</div>
+										<div class="col-md-12 animate-box">
+											<div class="feature-center">
+												<span class="counter js-counter" data-to="{$pa}">1</span>
+												<span class="counter-label">用户满意度</span>
+											</div>
+										</div>
+										<div class="col-md-12 animate-box">
+											<div class="feature-center">
+												<span class="counter js-counter" data-to="{$downloadcount}">1</span>
+												<span class="counter-label">下载次数</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div id="fh5co-section">
+				<div class="col-nineth">
+					<div class="row">
+						<div class="col-third">
+							<div class="col-md-12">
+								<span class="icon">
+									<i class="icon-grid"></i>
+								</span>
+								<div class="desc">
+									<h3>Windows操作系统</h3>
+									<p>Windows操作系统,是美国微软公司研发的一套操作系统，它问世于1985年，后续的系统版本由于微软不断的更新升级，变得易用，慢慢成为家家户户最喜爱的操作系统。</p>
+									<p><a href="#" class="btn btn-primary">了解更多Windows</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-third">
+							<div class="col-md-12">
+								<span class="icon">
+									<i class="icon-tv"></i>
+								</span>
+								<div class="desc">
+									<h3>Linux操作系统</h3>
+									<p>Linux是一套免费使用和自由传播的操作系统，它能运行主要的UNIX工具软件、应用程序和网络协议。它支持32位和64位硬件。是一个性能稳定的多用户网络操作系统。</p>
+									<p><a href="#" class="btn btn-primary">了解更多Linux</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-third">
+							<div class="col-md-12">
+								<span class="icon">
+									<i class="icon-browser"></i>
+								</span>
+								<div class="desc">
+									<h3>Mac OS X操作系统</h3>
+									<p>Mac OS是一套运行于苹果电脑上的操作系统。是最流畅的操作系统之一，现行的最新的系统版本是OS X 10.10 Yosemite，且网上也有在PC上运行的Mac系统，简称 Mac PC。</p>
+									<p><a href="#" class="btn btn-primary">了解更多Mac OS X</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-forth fh5co-video fh5co-bg" style="background-image: url({$list11.photo})">
+					<a href="{$list11.video}" class="popup-vimeo bianhua lianjie" title="{$list11.name}(时常更新)"><i class="icon-video2 bianhua lianjie"></i></a>
+						<div class="overlay"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="fh5co-portfolio">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>{$list8.title1}</h2>
+					<p>{$list8.introduce1}</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="project">
+					<div class="col-md-8 col-md-push-5 animate-box" data-animate-effect="fadeInLeft">
+						<img class="img-responsive" src="{$list8.photo}" alt="work">
+					</div>
+					<div class="col-md-4 col-md-pull-8 animate-box" data-animate-effect="fadeInRight">
+						<div class="mt">
+							<h3>{$list8.title2}</h3>
+							<p>{$list8.introduce2}</p>
+							<ul class="list-nav">
+								<li><i class="icon-check"></i>{$list8.title3}</li>
+								<li><i class="icon-check"></i>{$list8.title4}</li>
+								<li><i class="icon-check"></i>{$list8.title5}</li>
+								<li><i class="icon-check"></i>{$list8.title6}</li>
+								<li><i class="icon-check"></i>{$list8.title7}</li>
+								<li><a href="" class="bianhua lianjie">继续了解...</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>-
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-portfolio">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>{$list9.title1}</h2>
+					<p>{$list9.introduce1}</p>
+				</div>
+			</div>
+			<div class="row">
+				
+				<div class="project">
+					<div class="col-md-8 col-md-pull-1 animate-box" data-animate-effect="fadeInLeft">
+						<img class="img-responsive" src="{$list9.photo}" alt="work">
+					</div>
+					<div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
+						<div class="mt2">
+							<div>
+								<h4><i class="icon-user"></i>{$list9.title2}</h4>
+								<p>{$list9.introduce2}</p>
+							</div>
+							<div>
+								<h4><i class="icon-video2"></i>{$list9.title3}</h4>
+								<p>{$list9.introduce3}</p>
+							</div>
+							<div>
+								<h4><i class="icon-shield"></i>{$list9.title4}</h4>
+								<p>{$list9.introduce4}</p>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+<div class="portfolio-section" id="portfolio"></div>  <!--滑动网页标记-->
+	<div id="fh5co-portfolio">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>{$list10.title1}</h2>
+					<p>{$list10.introduce1}</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="project">
+					<div class="col-md-8 col-md-push-5 animate-box" data-animate-effect="fadeInLeft">
+						<img class="img-responsive" src="{$list10.photo}" alt="work">
+					</div>
+					<div class="col-md-4 col-md-pull-8 animate-box" data-animate-effect="fadeInRight">
+						<div class="mt">
+							<h3>{$list10.title2}</h3>
+							<p>{$list10.introduce2}</p>
+							<ul class="list-nav">
+							    <li><i class="icon-check"></i>{$list10.title3}</li>
+								<li><i class="icon-check"></i>{$list10.title4}</li>
+								<li><i class="icon-check"></i>{$list10.title5}</li>
+								<li><i class="icon-check"></i>{$list10.title6}</li>
+								<li><a href="" class="bianhua lianjie">继续了解...</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-portfolio">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>{$list13.title1}</h2>
+					<p>{$list13.introduce1}</p>
+				</div>
+			</div>
+			<div class="row">
+				
+				<div class="project">
+					<div class="col-md-8 col-md-pull-1 animate-box" data-animate-effect="fadeInLeft">
+						<img class="img-responsive" src="{$list13.photo}" alt="work">
+					</div>
+					<div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
+						<div class="mt2">
+							<div>
+								<h4><i class="icon-user"></i>{$list13.title2}</h4>
+								<p>{$list13.introduce2}</p>
+							</div>
+							<div>
+								<h4><i class="icon-video2"></i>{$list13.title3}</h4>
+								<p>{$list13.introduce3}</p>
+							</div>
+							<div>
+								<h4><i class="icon-shield"></i>{$list13.title4}</h4>
+								<p>{$list13.introduce4}</p>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-portfolio">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>{$list14.title1}</h2>
+					<p>{$list14.introduce1}</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="project">
+					<div class="col-md-8 col-md-push-5 animate-box" data-animate-effect="fadeInLeft">
+						<img class="img-responsive" src="{$list14.photo}" alt="work">
+					</div>
+					<div class="col-md-4 col-md-pull-8 animate-box" data-animate-effect="fadeInRight">
+						<div class="mt">
+							<h3>{$list14.title2}</h3>
+							<p>{$list14.introduce2}</p>
+							<ul class="list-nav">
+								<li><i class="icon-check"></i>{$list14.title3}</li>
+								<li><i class="icon-check"></i>{$list14.title4}</li>
+								<li><i class="icon-check"></i>{$list14.title5}</li>
+								<li><i class="icon-check"></i>{$list14.title6}</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-portfolio">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>{$list15.title1}</h2>
+					<p>{$list15.introduce1}</p>
+				</div>
+			</div>
+			<div class="row">
+				
+				<div class="project">
+					<div class="col-md-8 col-md-pull-1 animate-box" data-animate-effect="fadeInLeft">
+						<img class="img-responsive" src="{$list15.photo}" alt="work">
+					</div>
+					<div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
+						<div class="mt2">
+							<div>
+								<h4><i class="icon-user"></i>{$list15.title2}</h4>
+								<p>{$list15.introduce2}</p>
+							</div>
+							<div>
+								<h4><i class="icon-video2"></i>{$list15.title3}</h4>
+								<p>{$list15.introduce3}</p>
+							</div>
+							<div>
+								<h4><i class="icon-shield"></i>{$list15.title4}</h4>
+								<p>{$list15.introduce4}</p>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+<div class="testimonials-section" id="testimonials"></div><!--滑动网页标记-->
+<div id="fh5co-portfolio">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>{$list17.title1}</h2>
+					<p>{$list17.introduce1}</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="project">
+					<div class="col-md-8 col-md-push-5 animate-box" data-animate-effect="fadeInLeft">
+						<img class="img-responsive" src="{$list17.photo}" alt="work">
+					</div>
+					<div class="col-md-4 col-md-pull-8 animate-box" data-animate-effect="fadeInRight">
+						<div class="mt">
+							<h3>{$list17.title2}</h3>
+							<p>{$list17.introduce2}</p>
+							<ul class="list-nav">
+								<li><i class="icon-check"></i>{$list17.title3}</li>
+								<li><i class="icon-check"></i>{$list17.title4}</li>
+								<li><i class="icon-check"></i>{$list17.title5}</li>
+								<li><i class="icon-check"></i>{$list17.title6}</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div id="fh5co-testimonial">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2 style="color:red">{$list16.name}ISO镜像下载</h2>
+				</div>
+			</div>
+			<div class="row">
+			    {volist name="list4" id="vo"}
+				<div class="col-md-4 col-lg-4 col-md-4 animate-box">
+					<div class="testimony"> 
+						<blockquote>
+						<h4 style="margin-top: 15px;">{$vo.filename}</h4>
+						<h5 style="color: red;">SHA1:{$vo.sha}</h5>
+							<a href="{:url('download/win?id='.$vo.id)}" title="64位镜像下载地址" class="bianhua lianjie">{$vo.wei}位ISO镜像下载地址</a> || 文件大小:{$vo.filesize}G
+						</blockquote>
+						<p class="author"><cite style="font-size: 25px;">{$vo.jianname} {$vo.stname}({$vo.chname}){$vo.wei}位</cite></p>
+					</div>
+				</div>
+				{/volist}
+				
+				</div>
+				<div class="row">
+				{volist name="list5" id="vo"}
+				<div class="col-md-4 col-lg-4 col-md-4 animate-box">
+					<div class="testimony"> 
+						<blockquote>
+						<h4 style="margin-top: 15px;">{$vo.filename}</h4>
+						<h5 style="color: red;">SHA1:{$vo.sha}</h5>
+							<a href="{:url('download/win?id='.$vo.id)}" title="64位镜像下载地址" class="bianhua lianjie">{$vo.wei}位ISO镜像下载地址</a> || 文件大小:{$vo.filesize}G
+						</blockquote>
+						<p class="author"><cite style="font-size: 25px;">{$vo.jianname} {$vo.stname}({$vo.chname}){$vo.wei}位</cite></p>
+					</div>
+				</div>
+				{/volist}
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-started">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>订阅我们</h2>
+					<p>将你的电子邮件告诉我们，您的邮箱将会获得我们的最新推送。</p>
+				</div>
+			</div>
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2">
+					<form class="form-inline">
+						<div class="col-md-6 col-sm-6">
+							<div class="form-group">
+								<label for="email" class="sr-only">Email</label>
+								<input type="email" class="form-control" id="email" placeholder="Email">
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6">
+							<button type="submit" class="btn btn-default btn-block ">订阅</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 fh5co-widget">
+					<h3>BOM软件商店</h3>
+					<p>系统工作室，一家专门致力于推广计算机系统的平台，站长 zhang 是一位长期关注 软件、互联网、移动应用与各种开发技术 的IT爱好者，建立本站旨在与更多人分享使用电脑的快乐与精彩！</p>
+					<p><a href="#" class="lianjie bianhua">Learn More</a></p>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+						<li><a href="#">关于本站</a></li>
+						<li><a href="#">站长微博</a></li>
+						<li><a href="#">联系站长</a></li>
+						<li><a href="#">我想留言</a></li>
+						<li><a href="#">获取帮助</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+						<li><a href="#">正版商店</a></li>
+						<li><a href="#">正版推荐</a></li>
+						<li><a href="#">广告招商</a></li>
+						<li><a href="#">技术推荐</a></li>
+						<li><a href="#">加入我们</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+						<li><a href="https://www.apple.com/cn//?afid=p238%7C1m22G5hTh-dc_mtid_18707vxu38484_pcrid_14761751267_&cid=aos-cn-kwba-brand">苹果官网</a></li>
+						<li><a href="https://www.microsoft.com/zh-cn/">微软官网</a></li>
+						<li><a href="https://www.google.com.hk/">谷歌官网</a></li>
+						<li><a href="https://www.jd.com/">京东商城</a></li>
+						<li><a href="https://www.amazon.cn/">亚马逊官网</a></li>
+					</ul>
+				</div>
+			</div>
+            <tr align="center" bgcolor="#d644e9" width="100%">
+                <td>
+                    <div align="center" style="border-radius:15px;opacity:.8;background-color: #b641b6;">
+                        <div>
+                            <a class="bianhua" href="#">关于我们</a>&nbsp;｜&nbsp;
+                            <a class="bianhua" href="#">媒体报道</a>&nbsp;｜&nbsp;
+                            <a class="bianhua" href="#">品牌招商</a>&nbsp;｜&nbsp;
+                            <a class="bianhua" href="#">隐私条款</a>&nbsp;｜&nbsp;
+                            <a href="#" class="bianhua">友情链接</a>&nbsp;｜&nbsp;
+                            <a class="bianhua" href="#">系统地图</a>
+                        </div>
+                        <div style="color: #FFF">
+                        Copyright ? www.BOM.com，All Rights Reserved 冀ICP备08114786号-1 许可证：冀B2-20080329<br/>
+                        本站基于{$list3.internet}+{$list3.computer}+{$list3.os}+{$list3.server}+{$list3.sqlku}+{$list3.phpmyadmin}+{$list3.environment} 构建 版权所有 {$list3.webname}
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <div class="keep">
+	            <div class="container">
+		            <ul>
+			            <li><a class="facebook bianhua" href="https://www.facebook.com/"></a></li>
+			            <li><a class="twitter bianhua" href="https://www.twitter.com/"></a></li>
+			            <li><a class="googl bianhua" href="https://www.google.com.hk/"></a></li>
+			            <li><a class="message bianhua" href="#"></a></li>
+		            </ul>
+	            </div>
+            </div>
+        <!--//keep in touch-->
+        </div>
+	</footer>
+	</div>
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	<!-- jQuery -->
+	<script src="/os/public/index/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/os/public/index/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/os/public/index/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="/os/public/index/js/jquery.waypoints.min.js"></script>
+	<!-- countTo -->
+	<script src="/os/public/index/js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="/os/public/index/js/jquery.magnific-popup.min.js"></script>
+	<script src="/os/public/index/js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="/os/public/index/js/main.js"></script>
+	</body>
+</html>
+

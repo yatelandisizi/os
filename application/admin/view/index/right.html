@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="/os/public/admin/img/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>网站基本信息</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Bootstrap core CSS     -->
+    <link href="/os/public/admin/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Animation library for notifications   -->
+    <link href="/os/public/admin/css/animate.min.css" rel="stylesheet"/>
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="/os/public/admin/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="/os/public/admin/css/demo.css" rel="stylesheet" />
+    <!--     Fonts and icons     -->
+    <link href="/os/public/admin/css/pe-icon-7-stroke.css" rel="stylesheet" />
+</head>
+<body class="beijing">
+<form id="form1" name="form1" method="post">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">关于本网站：</h4>
+                        <p class="category">在此填写关于网站的基本信息</p>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>关于本站：</h5>
+                                <p class="category">系统环境：</p>
+                                <div class="alert alert-info">
+                                    <input type="text" name="os" class="btn btn-info btn-fill" value="{$list.os}">
+                                    <input type="submit" class="close" value="修改" style="margin-top: 5px;">
+                                    <input type="hidden" name="ID" value="{$list.ID}">
+                                </div>
+                                <p class="category">数据库环境：</p>
+                                <div class="alert alert-success">
+                                    <input type="text" name="sqlku" class="btn btn-success btn-fill" value="{$list.sqlku}">
+                                    <input type="submit" class="close" value="修改" style="margin-top: 5px;">
+                                </div>
+                                <p class="category">服务器环境：</p>
+                                <div class="alert alert-warning">
+                                    <input type="text" name="server" class="btn btn-warning btn-fill" value="{$list.server}">
+                                    <input type="submit" class="close" value="修改" style="margin-top: 5px;">
+                                </div>
+                                <p class="category">脚本运行环境：</p>
+                                <div class="alert alert-danger">
+                                    <input type="text" name="environment" class="btn btn-danger btn-fill" value="{$list.environment}">
+                                    <input type="submit" class="close" value="修改" style="margin-top: 5px;">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>相关技术：</h5>
+                                <p class="category">服务器硬件：</p>
+                                <div class="alert alert-info">
+                                    <input type="text" name="computer" class="btn btn-info btn-fill" value="{$list.computer}">
+                                    <input type="submit" class="close" value="修改" style="margin-top: 5px;">
+                                </div>
+                                <p class="category">网络服务：</p>
+                                <div class="alert alert-success">
+                                    <input type="text" name="internet" class="btn btn-success btn-fill" value="{$list.internet}">
+                                    <input type="submit" class="close" value="修改" style="margin-top: 5px;">
+                                </div>
+                                <p class="category">数据库管理：</p>
+                                <div class="alert alert-warning">
+                                    <input type="text" name="phpmyadmin" class="btn btn-warning btn-fill" value="{$list.phpmyadmin}">
+                                    <input type="submit" class="close" value="修改" style="margin-top: 5px;">
+                                </div>
+                                <p class="category">网站名称：</p>
+                                <div class="alert alert-danger">
+                                    <input type="text" name="webname" class="btn btn-danger btn-fill" value="{$list.webname}">
+                                    <input type="submit" class="close" value="修改" style="margin-top: 5px;">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="places-buttons">
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3 text-center">
+                                    <h5>网站技术支持
+                                        <p class="category">本网站基于ThinkPHP5.0版本</p>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-md-offset-3">
+                                    <a href="{:url('index/index/index')}" class="btn btn-default btn-block">网站首页</a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="{:url('index/index/windows10')}" class="btn btn-default btn-block">Win10系统</a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="{:url('index/index/windows8')}" class="btn btn-default btn-block">Win8系统</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-md-offset-3">
+                                    <a href="{:url('index/index/windows7')}" class="btn btn-default btn-block">Win7系统</a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="{:url('index/index/raspberryshow')}" class="btn btn-default btn-block">树莓派系统</a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="{:url('index/index/index')}" class="btn btn-default btn-block">软件页</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>{$list1.stname}信息修改</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+	<link rel="shortcut icon" href="/os/public/favicon.ico" >  
+	<!--网站ico小图标-->
+    <!-- Bootstrap core CSS     -->
+    <link href="/os/public/admin/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Animation library for notifications   -->
+    <link href="/os/public/admin/css/animate.min.css" rel="stylesheet"/>
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="/os/public/admin/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="/os/public/admin/css/demo.css" rel="stylesheet" />
+    <!--     Fonts and icons     -->
+    <link href="/os/public/admin/css/pe-icon-7-stroke.css" rel="stylesheet" />
+</head>
+<body class="beijing">
+<form id="form1" name="form1" method="post" enctype="multipart/form-data" action="{:url('index/windowsfileupdatainfointo')}?id={$list1.id}">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">{$list1.upbanben}{$list1.banbenname} - {$list1.stname} 文件上传</h4>
+                            </div>
+                            <div class="content">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <input type="hidden" name="upbanben" class="form-control" value="{$list1.upbanben}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <input type="hidden" name="banbenname" class="form-control" value="{$list1.banbenname}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <input type="hidden" name="stname" class="form-control" value="{$list1.stname}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <input type="hidden" name="jianname" class="form-control" value="{$list1.jianname}">
+                                            </div>
+                                        </div>
+<div class="col-md-3">
+                                            <div class="form-group">
+                                                <input type="hidden" name="chname" class="form-control" value="{$list1.chname}">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <input type="hidden" name="filename" class="form-control" value="{$list1.filename}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <input type="hidden" name="sha" class="form-control" value="{$list1.sha}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <input type="hidden" name="filesize" class="form-control" value="{$list1.filesize}">
+                                            </div>
+                                        </div>
+                                    </div>
+
+									<div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                        		<input type="hidden" name="wei" class="form-control" value="{$list1.wei}">
+                                      		</div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <input type="hidden" name="frequency" class="form-control" readonly="readonly" value="{$list1.frequency}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                            	<input type="hidden" name="shunxu" class="form-control" readonly="readonly" value="{$list1.shunxu}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                	<input type="hidden" name="winbanben" class="form-control" readonly="readonly" value="{$list1.winbanben}">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>本地下载地址：</label>
+                                                <div class="alert alert-warning">
+                                                <input type="text" name="bendi" class="form-control btn btn-warning btn-fill" value="{$a}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="hidden" name="xunlei" class="form-control" value="{$list1.xunlei}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="hidden" name="yunpan" class="form-control" value="{$list1.yunpan}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">确认提交</button>
+                                    <div class="clearfix"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</form>
+</body>
+</html>

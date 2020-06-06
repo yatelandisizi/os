@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>添加新的windows系统</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/os/public/favicon.ico" >
+	<!--网站ico小图标-->
+    <link href="/os/public/admin/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- bootstrap css样式  -->
+    <link href="/os/public/admin/css/animate.min.css" rel="stylesheet"/>
+    <!--  Light Bootstrap Table core CSS  -->
+    <link href="/os/public/admin/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+    <!--  CSS for Demo Purpose, don't include it in your project -->
+    <link href="/os/public/admin/css/demo.css" rel="stylesheet" />
+    <!--     Fonts and icons     -->
+    <link href="/os/public/admin/css/pe-icon-7-stroke.css" rel="stylesheet" />
+</head>
+<body class="beijing">
+<form id="form1" name="form1" enctype="multipart/form-data" method="post" action="{:url('index/windowsaddinfo')}">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">添加新Windows系统信息</h4>
+                            </div>
+                            <div class="content">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label>Windows版本(例：window10)</label>
+                                                <select name="upbanben" class="form-control">
+                                                {volist name="list1" id="vo"}
+                                                    <option value="{$vo.upbanben}">{$vo.upbanben}</option>
+                                                {/volist}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label>Win版本更新名称(例：创意者)</label>
+                                                <select name="banbenname" id="banbenname" class="form-control" onchange="changeSelect(this.selectedIndex)"></select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label>Windows版本简称(例：Win10)</label>
+                                                <select name="jianname" class="form-control">
+                                                {volist name="list1" id="vo"}
+                                                    <option value="{$vo.jianname}">{$vo.jianname}</option>
+                                                {/volist}
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>系统名称(例：专业版)</label>
+                                                <select name="chname" id="province" class="form-control"></select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>系统英文名称(例：Professional)</label>
+                                                <select name="stname" id="city" class="form-control" readonly="readonly"></select>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                   
+                                                <input type="hidden" name="filename" class="form-control" >
+                                     
+                                                <input type="hidden" name="sha" class="form-control" placeholder="SHA">
+                                      
+                                                <input type="hidden" name="filesize" class="form-control" placeholder="文件大小">
+                                      
+
+									<div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                        <label>系统位数：</label>
+                                         <select name="wei" class="form-control">
+                                                <option value="32">32位</option>
+                                                <option value="64">64位</option>
+                                            </select>
+                                      </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>下载次数：</label>
+                                                <input type="text" name="frequency" class="form-control" readonly="readonly">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>windows版本(用于数据排序)</label>
+                                                <select name="shunxu" id="town" class="form-control" readonly="readonly"></select> 
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>更新版本(用于数据库查找)</label>
+                                                <select name="winbanben" class="form-control" readonly="readonly"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>本地下载地址：</label>
+                                                <input type="text" name="bendi" class="form-control" placeholder="本地下载地址">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    -->
+                                     <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>上传本地下载文件：</label>
+                                                <div class="alert alert-success">
+                                                    <input type="file" name="file" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>迅雷下载地址：</label>
+                                                <input type="text" name="xunlei" class="form-control" placeholder="迅雷下载地址">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>百度网盘下载地址：</label>
+                                                <input type="text" name="yunpan" class="form-control" placeholder="百度网盘下载地址">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">提交</button>
+                                    <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</form>
+</body>
+</html>
+<script type="text/javascript">
+     var arr_banbenname = [
+                            {volist name="list1" id="vo"}
+                            "{$vo.name}",
+                            {/volist}
+                            ];
+     var arr_winbanben = [
+                            {volist name="list1" id="vo"}
+                            ["{$vo.winbanben}"],
+                            {/volist}
+                        ];
+     //网页加载完成，初始化菜单
+     window.onload = init;//传入函数地址
+     function init(){
+         //首先获取对象
+         var banbenname = document.form1.banbenname;
+         var winbanben = document.form1.winbanben;
+ 
+         //指定省份中<option>标记的个数
+         banbenname.length = arr_banbenname.length;
+ 
+         //循环将数组中的数据写入<option>标记中
+         for(var i=0;i<arr_banbenname.length;i++){
+             banbenname.options[i].text = arr_banbenname[i];
+             banbenname.options[i].value = arr_banbenname[i];
+         }
+ 
+         //修改省份列表的默认选择项
+         var index = 0;
+         banbenname.selectedIndex = index;
+ 
+         //指定城市中<option>标记的个数
+         winbanben.length = arr_winbanben[index].length;
+ 
+         //循环将数组中的数据写入<option>标记中
+         for (var j = 0; j<arr_winbanben[index].length;j++) {
+             winbanben.options[j].text = arr_winbanben[index][j];
+             winbanben.options[j].value = arr_winbanben[index][j];
+         }
+ 
+     }
+ 
+     function  changeSelect(index){
+         //选择对象
+         var winbanben = document.form1.winbanben;
+         //修改省份列表的选择项
+         banbenname.selectedIndex = index;
+ 
+         //指定城市中<option>标记的个数
+         winbanben.length = arr_winbanben[index].length;
+ 
+         //循环将数组中的数据写入<option>标记中
+         for (var j = 0; j<arr_winbanben[index].length;j++) {
+             winbanben.options[j].text = arr_winbanben[index][j];
+             winbanben.options[j].value = arr_winbanben[index][j];
+         }
+     }
+ </script>
+
+ <script>  
+    let EventUtil = {  
+        addHandler: function (element, type, handler) {  
+            if (element.addEventListener) {  
+                element.addEventListener(type, handler, false)  
+            } else if (element.attachEvent) {  
+                element.attachEvent('on' + type, handler);  
+            } else {  
+                element['on' + type] = handler  
+            }  
+        },  
+        removeHandler: function (element, type, handler) {  
+            if (element.removeEventListener) {  
+                element.removeEventListener(type, handler, false);  
+            } else if (element.detachEvent) {  
+                element.detachEvent("on" + type, handler);  
+            } else {  
+                element["on" + type] = null;  
+            }  
+        },  
+        getEvent: function (event) {  
+            return event ? event : window.event;  
+        },  
+        getTarget: function (event) {  
+            return event.target || event.srcElement;  
+        },  
+        preventDefault: function (event) {  
+            if (event.preventDefault) {  
+                event.preventDefault();  
+            } else {  
+                event.returnValue = false;  
+            }  
+        },  
+        stopPropagation: function (event) {  
+            if (event.stopPropagation) {  
+                event.stopPropagation();  
+            } else {  
+                event.cancelBubble = true;  
+            }  
+        }  
+  
+    }  
+    let optionKinds = {  
+        "province": {  
+            "家庭版": ['HomeBasic'],  
+            "家庭高级版": ['HomePremium'],  
+            "标准版": ['DVD'],
+            "专业版": ['Professional'],
+            "教育版": ['Education'],
+            "企业版": ['Enterprise'],
+            "旗舰版": ['Ultimate'],
+            "多合一版": ['multi-edition'],
+            "VL多合一版": ['multi-editionVL'],
+        },  
+        "city": {  
+            "HomeBasic": ['1'],  
+            "HomePremium": ['2'],  
+            "DVD": ['3'],  
+            "Professional": ['4'],
+            "Education": ['5'],
+            "Enterprise": ['6'],
+            "Ultimate": ['7'],
+            "multi-edition": ['8'],  
+            "multi-editionVL": ['9']  
+        },  
+    };  
+  
+    function turn_arr(oJsonArr) {  
+        let iCount = 0;  
+        let turn_json_arr = [];  
+        for (key in oJsonArr) {  
+            turn_json_arr.push(key);  
+        }  
+        return turn_json_arr;  
+    }  
+  
+    function init(which_select, keyWord, which_select_son) {  
+        let placeOption = '';  
+        let option_arr = turn_arr(optionKinds[keyWord]);  
+        for (let i = 0; i < option_arr.length; i++) {  
+            placeOption += "<option value='" + option_arr[i] + "'>" + option_arr[i] + "</option>";  
+        }  
+        which_select.innerHTML = placeOption;  
+        relevance_place(which_select, keyWord, which_select_son); //初始化与之相关联的子列表  
+    }  
+  
+    function relevance_place(which_select, keyWord, which_select_son) {  
+        let placeOption_son = '';  
+        for (let i = 0; i < which_select.length; i++) {  
+            if (which_select[i].selected) {  
+                for (key in optionKinds[keyWord]) {  
+                    if (key == which_select[i].value) {  
+                        for (let i = 0; i < optionKinds[keyWord][key].length; i++) {  
+                            placeOption_son += "<option value='" + optionKinds[keyWord][key][i] + "'>" + optionKinds[  
+                                keyWord][key][i] + "</option>"  
+                        }  
+                        which_select_son.innerHTML = placeOption_son  
+                    }  
+                }  
+            }  
+        }  
+    }  
+    init(document.getElementById('province'), "province", document.getElementById('city'));  
+    init(document.getElementById('city'), "city", document.getElementById('town'));  
+    EventUtil.addHandler(document.getElementById('province'), 'change', function () {  
+        relevance_place(document.getElementById('province'), "province", document.getElementById('city'));  
+        relevance_place(document.getElementById('city'), 'city', document.getElementById('town'));  
+    });  
+    EventUtil.addHandler(document.getElementById('city'), 'change', function () {  
+        relevance_place(document.getElementById('city'), 'city', document.getElementById('town'));  
+    })  
+</script>  

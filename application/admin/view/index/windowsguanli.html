@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/os/public/favicon.ico" >  
+    <!--网站ico小图标-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>网站基本信息</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Bootstrap core CSS     -->
+    <link href="/os/public/admin/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Animation library for notifications   -->
+    <link href="/os/public/admin/css/animate.min.css" rel="stylesheet"/>
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="/os/public/admin/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="/os/public/admin/css/demo.css" rel="stylesheet" />
+    <!--     Fonts and icons     -->
+    <link href="/os/public/admin/css/pe-icon-7-stroke.css" rel="stylesheet" />
+</head>
+<body class="beijing">
+    <div class="content">
+        <div class="container-fluid">
+            <div class="card col-md-12">
+                <div class="header">
+                    <h4 class="title">windows管理：</h4>
+                    <p class="category">在此管理关于windows的基本信息</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <h5>进入管理：</h5>
+                    </div>
+                    <div class="col-md-5">
+                        <h5>windows系统分类：</h5>
+                    </div>
+                    <div class="col-md-1">
+                        <h5>修改操作：</h5>
+                    </div>
+                    <div class="col-md-1">
+                        <h5>删除操作：</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    {volist name="list1" id="vo"}
+                        <div class="col-md-5">
+                                <a href="{:url('index/windows')}?upbanben={$vo.upbanben}&&winbanben={$vo.winbanben}">
+                                    <div class="alert alert-success" align="center">
+                                        <span class="btn btn-success btn-fill">进入{$vo.upbanben}-{$vo.name}管理</span>
+                                    </div>
+                                </a>
+                        </div>
+                        <div class="col-md-5">
+                                <div class="alert alert-info" align="center">
+                                    <span class="btn btn-info btn-fill">{$vo.upbanben}{$vo.name} - 系统</span>
+                                </div>
+                        </div>
+                        <div class="col-md-1">
+                            <a href="{:url('index/newwindowsupdata')}?upbanben={$vo.upbanben}&&winbanben={$vo.winbanben}">
+                                <div class="alert alert-warning" align="center">
+                                    <span class="btn btn-warning btn-fill">修改</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-1">
+                            <a href="{:url('index/newwindowsdel')}?upbanben={$vo.upbanben}&&winbanben={$vo.winbanben}">
+                                <div class="alert alert-danger" align="center">
+                                    <span class="btn btn-danger btn-fill">删除</span>
+                                </div>
+                            </a>
+                        </div>
+                    {/volist}
+                </div>
+            </div>
+                <div class="places-buttons">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <a href="{:url('admin/index/newwindows')}" class="btn btn-default btn-block">添加全新的windows系列</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

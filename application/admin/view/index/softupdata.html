@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>修改软件信息</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/os/public/favicon.ico" >
+	<!--网站ico小图标-->
+    <link href="/os/public/admin/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- bootstrap css样式  -->
+    <link href="/os/public/admin/css/animate.min.css" rel="stylesheet"/>
+    <!--  Light Bootstrap Table core CSS  -->
+    <link href="/os/public/admin/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+    <!--  CSS for Demo Purpose, don't include it in your project -->
+    <link href="/os/public/admin/css/demo.css" rel="stylesheet" />
+    <!--     Fonts and icons     -->
+    <link href="/os/public/admin/css/pe-icon-7-stroke.css" rel="stylesheet" />
+</head>
+<body class="beijing">
+<form id="form1" name="form1" method="post" action="">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">修改{$list.name}的信息:共下载{$list.frequency}次</h4>
+                                <input type="hidden" name="frequency" value="{$list.frequency}">
+                            </div>
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>软件名称：(例：Dreamweaver CS6)</label>
+                                            <input type="text" name="name" class="form-control" value="{$list.name}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>软件类型：(例：网站设计软件)</label>
+                                            <input type="text" name="type" class="form-control" value="{$list.type}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>运行设备：(例：电脑)</label>
+                                            <select name="device" class="form-control">
+                                                <option value="{$list.device}">{$list.device}</option>
+                                                <option value="windows">windows设备</option>
+                                                <option value="android">android</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>支持语言：</label>
+                                            <select name="language" class="form-control">
+                                                <option value="{$list.language}">{$list.language}</option>
+                                                <option value="简体中文">简体中文</option>
+                                                <option value="英文">英文</option>
+                                                <option value="简体中文/英文">简体中文/英文</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>运行环境：(例：Win7/Win8/Win10)</label>
+                                            <select name="environment" class="form-control">
+                                                <option value="{$list.environment}">{$list.environment}</option>
+                                                <option value="Win7/win8/win10">Win7/win8/win10</option>
+                                                <option value="Win7">Win7</option>
+                                                <option value="Win8">Win8</option>
+                                                <option value="Win10">Win10</option>
+                                                <option value="XP">XP</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                      <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>支持系统位数：</label>
+                                            <select name="support" class="form-control">
+                                                <option value="{$list.support}">{$list.support}</option>
+                                                <option value="32">32</option>
+                                                <option value="64">64</option>
+                                                <option value="32/64">32/64</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>文件名：(例：2017-10-05)</label>
+                                            <input type="text" name="filename" readonly="readonly" class="form-control" value="{$list.filename}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>文件哈希值：</label>
+                                            <input type="text" name="sha" readonly="readonly" class="form-control" value="{$list.sha}">
+                                        </div>
+                                    </div>
+                                     <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>更新时间：(例：2017-10-05)</label>
+                                            <input type="date" name="uptime" readonly="readonly" class="form-control" value="{$list.uptime}">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>软件大小：</label>
+                                            <input type="text" name="size" readonly="readonly" class="form-control" value="{$list.size}">
+                                        </div>
+                                    </div>
+                                    
+                                     <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>软件评分：(例：8.5)</label>
+                                            <input type="text" name="score" readonly="readonly" class="form-control" value="{$list.score}">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                    <div class="row"  align="center">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>软件封面：</label><br>
+                                                <img src="{$list.photo}" width="300" height="200"><br><br>
+                                                <a href="{:url('admin/index/softphotoupdata')}?id={$list.id}" class="btn btn-info btn-fill">修改软件封面</a>
+                                                <input type="hidden" name="photo" value="{$list.photo}"><!--图片隐藏域-->
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>软件图片1：</label><br>
+                                                <img src="{$list.photo1}" width="300" height="200"><br><br>
+                                                <a href="{:url('admin/index/softphotoupdata1')}?id={$list.id}" class="btn btn-success btn-fill">修改软件图片1</a>
+                                                <input type="hidden" name="photo1" value="{$list.photo1}"><!--图片隐藏域-->
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>软件图片2：</label><br>
+                                                <img src="{$list.photo2}" width="300" height="200"><br><br>
+                                                <a href="{:url('admin/index/softphotoupdata2')}?id={$list.id}" class="btn btn-warning btn-fill">修改软件图片2</a>
+                                                <input type="hidden" name="photo2" value="{$list.photo2}"><!--图片隐藏域-->
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>软件图片3：</label><br>
+                                                <img src="{$list.photo3}" width="300" height="200"><br><br>
+                                                <a href="{:url('admin/index/softphotoupdata3')}?id={$list.id}" class="btn btn-danger btn-fill">修改软件图片3</a>
+                                                <input type="hidden" name="photo3" value="{$list.photo3}"><!--图片隐藏域-->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                   
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>软件功能标题：</label>
+                                                <input type="text" name="title1" class="form-control" value="{$list.title1}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="form-group">
+                                                <label>软件功能介绍：</label>
+                                                <input type="text" name="introduce1" class="form-control" value="{$list.introduce1}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>软件用法标题：</label>
+                                                <input type="text" name="title2" class="form-control" value="{$list.title2}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="form-group">
+                                                <label>软件用法介绍：</label>
+                                                <input type="text" name="introduce2" class="form-control" value="{$list.introduce2}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>软件特点标题：</label>
+                                                <input type="text" name="title3" class="form-control" value="{$list.title3}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="form-group">
+                                                <label>软件特点介绍：</label>
+                                                <input type="text" name="introduce3" class="form-control" value="{$list.introduce3}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>本地下载地址：</label>
+                                                <div class="alert alert-success">
+                                                    <a href="{:url('index/softfileupdata')}?id={$list.id}" class="close">点击这里上传文件并自动添加本地下载地址</a>
+                                                    <span><b> 本地下载地址 - </b>{$list.bendi}</span>
+                                                    <input type="hidden" name="bendi" value="{$list.bendi}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>迅雷下载地址：</label>
+                                                <input type="text" name="xunlei" class="form-control" value="{$list.xunlei}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>百度网盘下载地址：</label>
+                                                <input type="text" name="yunpan" class="form-control" value="{$list.yunpan}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">提交更新</button>
+                                    <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</form>
+</body>
+</html>

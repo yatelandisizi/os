@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>{$list.stname}下载</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="树莓派, windows系统, 系统, Andriod, windows,ios" />
+	<meta name="keywords" content="树莓派, windows系统, 系统, Andriod, windows,ios" />
+    <!--网站搜索关键字-->
+	<link rel="shortcut icon" href="/os/public/favicon.ico" >  
+	<!--网站ico小图标-->
+	<link rel="stylesheet" href="/os/public/index/css/icomoon.css">
+	<!--图标样式-->
+	<link rel="stylesheet" href="/os/public/download/css/style.css">
+	<!--重要样式-->
+	<link href="/os/public/index/css/bootstrapheader.css" rel="stylesheet" type="text/css" media="all">
+	<!--快捷访问样式-->
+	<link href="/os/public/download/css/bootstrap.css" rel='stylesheet' type='text/css' />
+
+	<link href="/os/public/download/css/style.css" rel='stylesheet' type='text/css' />
+
+	<link rel="shortcut icon" href="/os/public/favicon.ico" >  
+	<!--网站ico小图标-->
+	<link rel="stylesheet" href="/os/public/index/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="/os/public/index/css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="/os/public/index/css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/os/public/index/css/magnific-popup.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="/os/public/index/css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="/os/public/index/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="/os/public/index/js/respond.min.js"></script>
+	<![endif]-->
+	<!-- css -->
+	<link rel="stylesheet" href="/os/public/index/css/stylefooter.css" type="text/css" media="all" />
+	<style type="text/css">
+	a:link, a:visited { color: #93c8ff; text-decoration: none;} 
+	a:active, a:hover { color: red;}
+	</style>
+<link rel="stylesheet" id="genericons-css" href="/os/public/index/css/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentythirteen-style-css" href="/os/public/index/css/styleh.css" type="text/css" media="all">
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentythirteen-ie-css'  href='http://b1738918t3.iok.la/wordpress/wp-content/themes/twentythirteen//os/public/index/css/ie.css?ver=2013-07-18' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="/os/public/index/js/jquery.js"></script>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+			<style type="text/css" id="twentythirteen-header-css">
+			.site-header {
+			background: url(/os/public/index/images/headers/star.png) no-repeat scroll top;
+			background-size: 1900px auto;
+		}
+		@media (max-width: 767px) {
+			.site-header {
+				background-size: 768px auto;
+			}
+		}
+		@media (max-width: 359px) {
+			.site-header {
+				background-size: 360px auto;
+			}
+		}
+		</style>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script> 
+<script type="text/javascript" src="/os/public/download/js/move-top.js"></script>
+<script type="text/javascript" src="/os/public/download/js/easing.js"></script>
+<!--/script-->
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			});
+</script>
+<!---->
+</head>
+<body>
+<!---strat-banner---->
+<header  class="site-header" id="to-top">
+			<div class="home-link">
+				<h1 class="site-title" title="Windows创意者"><a href="" class="biaoti" style="color: black;">BOW爆软系统网</a></h1>
+				<div class="row">
+				<h2 class="site-description" style="float: left;">专门倒腾系统的网站--</h2>
+				<h4 style="margin-top: 8px;" title="查看用户资料">{$huanying}<a href="{:url('user/index')}?id={$list12.id}" style="color: red;">{$Request.session.username}</a></h4>
+				</div>
+			</div>
+			<div  class="navbar1">
+				<nav id="site-navigation" class="main-navigation navbar-default navbar-fixed-top" align="center">
+					<button class="menu-toggle">菜单</button>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="{:url('index/index')}"' >首页</submit>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">win10系统<span class="caret"></span></button>
+						<ul class="dropdown-menu" role="menu">
+							{volist name="list5" id="vo"}
+								<li><a href="{:url('index/windows10')}?upbanben={$vo.upbanben}&&winbanben={$vo.winbanben}">{$vo.upbanben}{$vo.name}</a></li>
+							{/volist}
+						</ul>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">win8系统<span class="caret"></span></button>
+						<ul class="dropdown-menu" role="menu">
+							{volist name="list6" id="vo"}
+								<li><a href="{:url('index/windows8')}?upbanben={$vo.upbanben}&&winbanben={$vo.winbanben}">{$vo.upbanben}{$vo.name}</a></li>
+							{/volist}
+						</ul>
+					</div>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="{:url('index/windows7')}?upbanben={$list7.upbanben}&&winbanben={$list7.winbanben}"' >win7系统</submit>
+					</div>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="https://www.redhat.com/zh/2"'>Linux系统</submit>
+					</div>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="{:url('index/raspberryshow')}"' >raspbain系统(树莓派)</submit>
+					</div>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="{:url('soft/index')}"' >软件下载</submit>
+					</div>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="http://127.0.0.1/blog"' >站主博客</submit>
+					</div>
+					<div class="btn-group">
+						<submit class="btn btn-default" onclick='window.location.href="{:url('video/index')}"' >短视频区</submit>
+					</div>
+             <form  method="get" class="search-form" action="">
+				<label>
+					<span class="screen-reader-text">搜索：</span>
+					<input type="search" class="search-field" placeholder="搜索…" value="" name="s" title="搜索">
+				</label>
+				<input type="submit" class="search-submit" value="搜索">
+			</form>				
+			</nav><!-- #site-navigation -->
+			</div><!-- #navbar -->
+		</header><!-- #masthead -->
+<div class="banner" >				
+	 <div class="header">  
+		 
+	 </div>
+	 <div class="container">
+		 <div class="banner-head" >
+			 <h1>{$list.upbanben}系统下载地址</h1>
+			 <h2>{$list.stname}访问次数：{$list.frequency}</h2>
+		 </div>
+		 
+	 </div>
+</div>
+<!---//End-banner---->
+<div class="terms">
+	 <div class="container">
+		  <div class="terms-sec-head">
+				<h3>{$list.filename}</h3>
+				<p></p>
+		  </div> 
+		 <div class="term">
+				<h4>&nbsp; 百度云下载：</h4>
+				<p>{$list.yunpan}</p>
+		 </div>	
+		 <div class="term">
+				<h4>&nbsp; 迅雷下载：</h4>
+				<p align="center"><a href="{$list.xunlei}">{$list.xunlei}</a></p>
+				<!--<a href="{$list.xunlei}" style="word-wrap: break-word;">{$list.xunlei}</a>-->
+		 </div>	
+		 <div class="term">
+				<h4>&nbsp; 本地下载：</h4>
+				<p align="center"><a href="{$list.bendi}">本地下载地址</a></p>
+		 </div>
+		
+		
+		 <div class="clearfix"></div>
+				 <div class="content-grid">
+					 <div class="content-grid-head">
+						 <h3 style="color: red;">北京时间(东八区)：</h3>
+						 <h4><script>  
+						 var date = new Date();  //创建对象  
+						 var y = date.getFullYear();     //获取年份 
+						 var m =date.getMonth()+1;   //获取月份  返回0-11  
+						 var d = date.getDate(); // 获取日  
+						 var w = date.getDay();   //获取星期几  返回0-6   (0=星期天)  
+						 var h = date.getHours();  
+						 var minute = date.getMinutes()  
+						 var s = date.getSeconds();  
+						 document.write(y+"-"+m+"-"+d+"   "+h+":"+minute+":"+s);  
+						 /*  
+						 charAt(int ch)用法  
+						 var str="Hello world!"  
+						 document.write(str.charAt(1))  
+						 输出：e  
+						 */  
+						</script> 当前登录用户： <a href="#">{$user}</a></h4>
+						 <div class="clearfix"></div>
+					 </div>
+					 <div class="content-grid-single">
+						 
+					 
+				 </div>			 			 
+	 </div>
+</div>
+<!--fotter-->
+<div class="fotter">
+	 <div class="container">
+		 <div class="col-md-4 fotter-info">
+			 <h3 style="color: yellow;">BOW软系统网</h3>
+			 <p>软件商店工作室，一家专门致力于推广计算机系统的平台，站长 zhang 是一位长期关注软件、互联网、移动应用与各种开发技术的IT爱好者，建立本站旨在与更多人分享使用电脑的快乐与精彩！</p>
+		 </div>
+		 <div class="col-md-4 fotter-list">
+			 <h3 style="color: yellow;">关于本站</h3>
+			 <ul>
+			 <li><a href="#">站长微博</a></li>
+			 <li><a href="#">联系站长</a></li>
+			 <li><a href="#">获取帮助</a></li>
+			 </ul>
+		 </div>
+		 <div class="col-md-4 fotter-media">
+				<h3 style="color: yellow;">分享至....</h3>
+				 <div class="social-icons">
+				 <a href="#"><span class="fb"> </span></a>
+				 <a href="#"><span class="twt"> </span></a>
+				 <a href="#"><span class="in"> </span></a>				 			 
+			    </div>
+		 </div>
+		 <div class="clearfix"></div>
+	 </div>
+</div>
+<!---fotter/-->
+<div class="copywrite">
+	 <div class="container">
+	 <p style="color: #FFF;">本站基于 &copy; {$list3.internet}+{$list3.computer}+{$list3.os}+{$list3.server}+{$list3.sqlku}+{$list3.phpmyadmin}+{$list3.environment} - 构建<a href="http://www.cssmoban.com/" target="_blank" title="模板之家">&nbsp; 版权所有</a> - 网站来自&nbsp;<a href="http://www.cssmoban.com/" title="网页模板" target="_blank">{$list3.webname}</a></p>
+</div>
+</div>
+<!---->
+<!---->
+<script type="text/javascript">
+		$(document).ready(function() {
+				/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+				*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
+});
+</script>
+<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+
+
+
+
+
+
+
+
+	<script src="/os/public/index/js/bootstrap.min.js"></script>
+	<!-- 下拉按钮 -->
+	
+
+
+
+
+
+
+
+</body>
+</html>

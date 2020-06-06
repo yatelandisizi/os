@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>添加新的windows系统</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/os/public/favicon.ico" >
+	<!--网站ico小图标-->
+    <link href="/os/public/admin/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- bootstrap css样式  -->
+    <link href="/os/public/admin/css/animate.min.css" rel="stylesheet"/>
+    <!--  Light Bootstrap Table core CSS  -->
+    <link href="/os/public/admin/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+    <!--  CSS for Demo Purpose, don't include it in your project -->
+    <link href="/os/public/admin/css/demo.css" rel="stylesheet" />
+    <!--     Fonts and icons     -->
+    <link href="/os/public/admin/css/pe-icon-7-stroke.css" rel="stylesheet" />
+</head>
+<body class="beijing">
+<form id="form1" name="form1" enctype="multipart/form-data" method="post" action="{:url('index/windowsaddinfointo')}">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">再次确认添加新Windows系统信息</h4>
+                            </div>
+                            <div class="content">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label>Windows版本(例：window10)</label>
+                                                <input type="text" name="upbanben" class="form-control" value="{$upbanben}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label>Win版本更新名称(例：创意者)</label>
+                                                <input type="text" name="banbenname" class="form-control" value="{$banbenname}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label>Windows版本简称(例：Win10)</label>
+                                                <input type="text" name="jianname" class="form-control" value="{$jianname}">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>系统名称(例：专业版)</label>
+                                                <input type="text" name="stname" class="form-control" value="{$stname}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>系统英文名称(例：Professional)</label>
+                                                <input type="text" name="chname" class="form-control" value="{$chname}" readonly="readonly">
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>文件名(例：cn_windows_10_multiple_editions_version_1703_updated_march_2017_x64_dvd_10194190.iso)</label>
+                                                <input type="text" name="filename" class="form-control" value="{$filename}" readonly="readonly">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>文件哈希值</label>
+                                                <input type="text" name="sha" class="form-control"  value="{$sha}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label>文件大小(单位：G)</label>
+                                                <input type="text" name="filesize" class="form-control" value="{$filesize}">
+                                            </div>
+                                        </div>
+                                    </div>
+
+									<div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                        <label>系统位数：</label>
+                                        <input type="text" name="wei" class="form-control"  value="{$wei}">
+                                      </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>下载次数：</label>
+                                                <input type="text" name="frequency" class="form-control" value="{$frequency}" readonly="readonly">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>windows版本(用于数据排序)</label>
+                                                 <input type="text" name="shunxu" class="form-control" value="{$shunxu}" readonly="readonly">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>更新版本(用于数据库查找)</label>
+                                                 <input type="text" name="winbanben" class="form-control" value="{$winbanben}" readonly="readonly">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>本地下载地址：</label>
+                                                <input type="text" name="bendi" class="form-control" placeholder="本地下载地址">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    -->
+                                     <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>本地下载地址：</label>
+                                                <div class="alert alert-success">
+                                                    <span><b> 本地下载地址 - </b>{$e}</span>
+                                                    <input type="hidden" name="bendi" value="{$e}">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>迅雷下载地址：</label>
+                                                <input type="text" name="xunlei" class="form-control" placeholder="迅雷下载地址">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>百度网盘下载地址：</label>
+                                                <input type="text" name="yunpan" class="form-control" placeholder="百度网盘下载地址">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">确认发布</button>
+                                    <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</form>
+</body>
+</html>

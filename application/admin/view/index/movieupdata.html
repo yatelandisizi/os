@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/os/public/favicon.ico" >  
+    <!--网站ico小图标-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>电影信息更新</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <!--手机窗口优化-->
+    <link href="/os/public/admin/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- bootstrap css 样式   -->
+    <link href="/os/public/admin/css/animate.min.css" rel="stylesheet"/>
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="/os/public/admin/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="/os/public/admin/css/demo.css" rel="stylesheet" />
+    <!--     Fonts and icons     -->
+    <link href="/os/public/admin/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <!--字体css样式-->
+</head>
+<body class="beijing">
+<form id="form1" name="form1" method="post" action="">
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">电影更新</h4>
+                        </div>
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>电影名：</label>
+                                        <input type="text" name="name" class="form-control" value="{$list.name}">
+                                        <input type="hidden" name="id" value="{$list.id}">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group" align="center">
+                                        <label>Win版本更新名称(例：Windows10正式版之创意者)</label>
+                                        <input type="hidden" name="video" class="form-control" value="{$list.video}"><br>
+                                        <video src="{$list.video}" controls="controls" width="200"></video>
+					<br>
+                                        <a href="{:url('index/moviefileupdata')}">更改电影文件</a>
+                                    </div>
+                                </div>
+                                 <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>更改电影封面</label><br>
+                                        <img src="{$list.photo}" width="300" height="150"><br><br>
+                                        <a href="{:url('index/moviephotoupdata')}" class="alert alert-success">更改电影封面</a><br><br>
+                                </div>
+                            </div>
+                            </div>
+                            
+                        </div>
+                        <div class="content">
+                            <div class="col-md-12">
+                                <label>将“\”改为“/”后前台正常显示电影封面</label><br>
+                                <input type="text" name="photo" class="form-control" value="{$list.photo}">
+                            </div>
+                        </div>
+                            <button type="submit" class="btn btn-info btn-fill pull-right" style="margin-right:30px;margin-top: 10px;">发布</button>
+                            <div class="clearfix" style="margin-top: 20px;"></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>
